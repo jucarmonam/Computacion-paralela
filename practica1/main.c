@@ -1,42 +1,31 @@
 /**
  * @file main.c
- * @author your name (you@domain.com)
- * @brief 
- * @version 0.1
+ * @author Juan Pablo Carmona Muñoz (jucarmonam) - Juan Sebastian Rodríguez (juarodriguezc)
  * @date 2022-04-05
- * 
  * @copyright Copyright (c) 2022
- * 
  */
 
-#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <sys/time.h>
-#include <sys/wait.h>
+#include <pthread.h>
 
-int Nthreads;
-double* sump;
-struct timeval start, end;
-double StopWatch;
+#define R_ARGS 3
 
-int main(int argc, char* argv[]){
-
-    gettimeofday(&start, NULL); 
-
-    if (argc > 3){
-        Nthreads = atoi(argv[1]);
-    }else{
-        printf("\nUso: %s Hilos Millones-de-Iteraciones\n",argv[0]);
-        exit(1);
+int main(int argc, char *argv[])
+{
+    char *loadPath;
+    char *savePath;
+    int arg = 0;
+    FILE *fp;
+    if ((argc - 1) < R_ARGS)
+    {
+        printf("Son necesarios 3 argumentos para el funcionamiento\n");
+        printf("Para una correcta ejecución: ./main input_image output_image parameter\n");
+        exit(-1);
     }
-
-
-    gettimeofday(&end, NULL);               
-    StopWatch = (double)(end.tv_sec + (double)end.tv_usec/1000000) -
-                (double)(start.tv_sec + (double)start.tv_usec/1000000); // Resta los dos tiempos obtenidos.
-    printf("The excecution of the program has taken: %.16g miliseconds.\n",StopWatch*1000.0); // Imprime el resultado.
-    
+    loadPath = *(argv+1);
+    savePath = *(argv+2);
+    arg = atoi(*(argv+3));
+    printf("%d\n",arg);
     return 0;
 }
