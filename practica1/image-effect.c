@@ -53,8 +53,8 @@ int main(int argc, char *argv[])
 {
     /*Declarar los string de lectura y escritura*/
     char *loadPath, *savePath;
-    /*Variable para yo que se xd*/
-    int arg = 0;
+    /*Variable para escoger el kernel*/
+    int argKer = 0;
     /*Variable para el número de hilos*/
     int nThreads = 0;
     /*Declaración de variable para la escritura del archivo*/
@@ -68,7 +68,17 @@ int main(int argc, char *argv[])
     /*Crear las tres matrices resultanres*/
     int *rMatR, *rMatG, *rMatB;
     /**/
-    int kernel[] = {-1,0,1,-2,0,2,-1,0,1};
+    int kernels[6][9] = {
+        {-1, 0, 1, -2, 0, 2, -1, 0, 1},     // Border detection (Sobel)
+        {1, -2, 1, -2, 5, -2, 1, -2, 1},    // Sharpen
+        {1, 1, 1, 1, -2, 1, -1, -1, -1},    // Norte
+        {-1, 1, 1, -1, -2, 1, -1, 1, 1},    // Este
+        {-1, -1, 0, -1, 0, 1, 0, 1, 1},     // Estampado en relieve
+        {-1, -1, -1, -1, 8, -1, -1, -1, -1} // Border detection (Sobel2)
+    };
+    int *ker;
+    /**/
+    int i = 0, j = 0, conv = 0;
     /*Verificar que la cantidad de argumentos sea la correcta*/
     if ((argc - 1) < R_ARGS)
     {
@@ -79,7 +89,7 @@ int main(int argc, char *argv[])
     /*Cargar en las variables los parametros*/
     loadPath = *(argv + 1);
     savePath = *(argv + 2);
-    arg = atoi(*(argv + 3));
+    argKer = atoi(*(argv + 3));
     nThreads = atoi(*(argv + 4));
     /*Verificar que el número de hilos sea válido*/
     if (nThreads < 0)
@@ -87,6 +97,11 @@ int main(int argc, char *argv[])
         printf("El número de hilos ingresado no es válido \n");
         exit(1);
     }
+    if(argKer > 5){
+        printf("El parámetro de kernel debe ser menor o igual a 5 \n");
+        exit(1);
+    }
+    ker = *(kernels + argKer);
     /*Cargar la imagen usando el parámetro con el nombre*/
     img = stbi_load(loadPath, &width, &height, &channels, 0);
     /*Verificar que la imagen exista y sea cargada correctamente*/
@@ -108,50 +123,25 @@ int main(int argc, char *argv[])
     initializeMatrix(matR, matG, matB, width, height, channels, img);
     /*Logica del filtro*/
     /*Crear las matrices de Color con para los resultados*/
-    rMatR = (int *)malloc(height * width * sizeof(int));
-    rMatG = (int *)malloc(height * width * sizeof(int));
-    rMatB = (int *)malloc(height * width * sizeof(int));
-
-    int i = 0;
-    int j = 0;
-    int conv = 0;
-    for (i = 1; i < height-1; i++)
+    rMatR = (int *)calloc(height * width, sizeof(int));
+    rMatG = (int *)calloc(height * width, sizeof(int));
+    rMatB = (int *)calloc(height * width, sizeof(int));
+    /*Operación de convolución*/
+    for (i = 1; i < height - 1; i++)
     {
-        for (j = 1; j < width-1; j++)
+        for (j = 1; j < width - 1; j++)
         {
-
-
-
-            
-            
-            
-
             /*Convolucion para el canal R*/
-            conv = (*(kernel) * *(matR + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matR + ((i - 1) * width + j)) + *(kernel + 2) * *(matR + ((i - 1) * width + j + 1))
-                                        + *(kernel+3) * *(matR + (i  * width + j - 1)) + *(kernel+4) * *(matR + (i * width + j)) + *(kernel+ 5) * *(matR + (i * width + j + 1))
-                                        + *(kernel+6) * *(matR + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matR + ((i + 1) * width + j)) + *(kernel+8) * *(matR + ((i + 1) * width + j + 1)))%255;
-            
+            conv = (*(ker) * *(matR + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matR + ((i - 1) * width + j)) + *(ker + 2) * *(matR + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matR + (i * width + j - 1)) + *(ker + 4) * *(matR + (i * width + j)) + *(ker + 5) * *(matR + (i * width + j + 1)) + *(ker + 6) * *(matR + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matR + ((i + 1) * width + j)) + *(ker + 8) * *(matR + ((i + 1) * width + j + 1))) % 255;
             *(rMatR + (i * width + j)) = conv < 0 ? 0 : conv;
             /*Convolucion para el canal G*/
-
-            
-            conv = (*(kernel) * *(matG + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matG + ((i - 1) * width + j)) + *(kernel + 2) * *(matG + ((i - 1) * width + j + 1))
-                                        + *(kernel+3) * *(matG + (i  * width + j - 1)) + *(kernel+4) * *(matG + (i * width + j)) + *(kernel+ 5) * *(matG + (i * width + j + 1))
-                                        + *(kernel+6) * *(matG + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matG + ((i + 1) * width + j)) + *(kernel+8) * *(matG + ((i + 1) * width + j + 1)))%255;
+            conv = (*(ker) * *(matG + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matG + ((i - 1) * width + j)) + *(ker + 2) * *(matG + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matG + (i * width + j - 1)) + *(ker + 4) * *(matG + (i * width + j)) + *(ker + 5) * *(matG + (i * width + j + 1)) + *(ker + 6) * *(matG + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matG + ((i + 1) * width + j)) + *(ker + 8) * *(matG + ((i + 1) * width + j + 1))) % 255;
             *(rMatG + (i * width + j)) = conv < 0 ? 0 : conv;
             /*Convolucion para el canal B*/
-
-            //*(rMatB + (i * width + j)) = 0;
-
-            
-            conv = (*(kernel) * *(matB + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matB + ((i - 1) * width + j)) + *(kernel + 2) * *(matB + ((i - 1) * width + j + 1))
-                                        + *(kernel+3) * *(matB + (i  * width + j - 1)) + *(kernel+4) * *(matB + (i * width + j)) + *(kernel+ 5) * *(matB + (i * width + j + 1))
-                                        + *(kernel+6) * *(matB + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matB + ((i + 1) * width + j)) + *(kernel+8) * *(matB + ((i + 1) * width + j + 1)))%255;
+            conv = (*(ker) * *(matB + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matB + ((i - 1) * width + j)) + *(ker + 2) * *(matB + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matB + (i * width + j - 1)) + *(ker + 4) * *(matB + (i * width + j)) + *(ker + 5) * *(matB + (i * width + j + 1)) + *(ker + 6) * *(matB + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matB + ((i + 1) * width + j)) + *(ker + 8) * *(matB + ((i + 1) * width + j + 1))) % 255;
             *(rMatB + (i * width + j)) = conv < 0 ? 0 : conv;
-
         }
     }
-
     /*Exportar la imagen resultante*/
     /*Reservar el espacio de memoria para la imagen resultante*/
     resImg = malloc(width * height * channels);
