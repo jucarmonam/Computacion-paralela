@@ -114,44 +114,7 @@ int main(int argc, char *argv[])
 
     int i = 0;
     int j = 0;
-
-    for (i = 0; i < height; i++)
-    {
-        for (j = 0; j < width; j++)
-        {
-            float prom = (*(matR + (i * width + j)) + *(matG + (i * width + j)) + *(matB + (i * width + j)))/3.0;
-            *(matR + (i * width + j)) = (int)prom;
-            *(matG + (i * width + j)) = (int)prom;
-            *(matB + (i * width + j)) = (int)prom;
-
-
-
-
-            /*
-            *(rMatR + (i * width + j)) = (*(kernel) * *(matR + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matR + ((i - 1) * width + j)) + *(kernel + 2) * *(matR + ((i - 1) * width + j + 1))
-                                        + *(kernel+3) * *(matR + (i  * width + j - 1)) + *(kernel+4) * *(matR + (i * width + j)) + *(kernel+ 5) * *(matR + (i * width + j + 1))
-                                        + *(kernel+6) * *(matR + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matR + ((i + 1) * width + j)) + *(kernel+8) * *(matR + ((i + 1) * width + j + 1)))%255;
-
-            /*Convolucion para el canal G*/
-
-            /*
-            *(rMatG + (i * width + j)) = (*(kernel) * *(matG + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matG + ((i - 1) * width + j)) + *(kernel + 2) * *(matG + ((i - 1) * width + j + 1))
-                                        + *(kernel+3) * *(matG + (i  * width + j - 1)) + *(kernel+4) * *(matG + (i * width + j)) + *(kernel+ 5) * *(matG + (i * width + j + 1))
-                                        + *(kernel+6) * *(matG + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matG + ((i + 1) * width + j)) + *(kernel+8) * *(matG + ((i + 1) * width + j + 1)))%255;
-            */
-            /*Convolucion para el canal B*/
-
-            //*(rMatB + (i * width + j)) = 0;
-
-            /*
-            *(rMatB + (i * width + j)) = (*(kernel) * *(matB + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matB + ((i - 1) * width + j)) + *(kernel + 2) * *(matB + ((i - 1) * width + j + 1))
-                                        + *(kernel+3) * *(matB + (i  * width + j - 1)) + *(kernel+4) * *(matB + (i * width + j)) + *(kernel+ 5) * *(matB + (i * width + j + 1))
-                                        + *(kernel+6) * *(matB + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matB + ((i + 1) * width + j)) + *(kernel+8) * *(matB + ((i + 1) * width + j + 1)))%255;
-            */
-
-        }
-    }
-
+    int conv = 0;
     for (i = 1; i < height-1; i++)
     {
         for (j = 1; j < width-1; j++)
@@ -159,35 +122,32 @@ int main(int argc, char *argv[])
 
 
 
-            int conv = (*(kernel) * *(matR + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matR + ((i - 1) * width + j)) + *(kernel + 2) * *(matR + ((i - 1) * width + j + 1))
-                        + *(kernel+3) * *(matR + (i  * width + j - 1)) + *(kernel+4) * *(matR + (i * width + j)) + *(kernel+ 5) * *(matR + (i * width + j + 1))
-                        + *(kernel+6) * *(matR + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matR + ((i + 1) * width + j)) + *(kernel+8) * *(matR + ((i + 1) * width + j + 1)));
             
-            *(rMatR + (i * width + j)) = conv < 0 ? 0 : conv;
-            *(rMatG + (i * width + j)) = conv < 0 ? 0 : conv;
-            *(rMatB + (i * width + j)) = conv < 0 ? 0 : conv;
+            
+            
 
-            /*
-            *(rMatR + (i * width + j)) = (*(kernel) * *(matR + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matR + ((i - 1) * width + j)) + *(kernel + 2) * *(matR + ((i - 1) * width + j + 1))
+            /*Convolucion para el canal R*/
+            conv = (*(kernel) * *(matR + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matR + ((i - 1) * width + j)) + *(kernel + 2) * *(matR + ((i - 1) * width + j + 1))
                                         + *(kernel+3) * *(matR + (i  * width + j - 1)) + *(kernel+4) * *(matR + (i * width + j)) + *(kernel+ 5) * *(matR + (i * width + j + 1))
                                         + *(kernel+6) * *(matR + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matR + ((i + 1) * width + j)) + *(kernel+8) * *(matR + ((i + 1) * width + j + 1)))%255;
-
+            
+            *(rMatR + (i * width + j)) = conv < 0 ? 0 : conv;
             /*Convolucion para el canal G*/
 
-            /*
-            *(rMatG + (i * width + j)) = (*(kernel) * *(matG + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matG + ((i - 1) * width + j)) + *(kernel + 2) * *(matG + ((i - 1) * width + j + 1))
+            
+            conv = (*(kernel) * *(matG + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matG + ((i - 1) * width + j)) + *(kernel + 2) * *(matG + ((i - 1) * width + j + 1))
                                         + *(kernel+3) * *(matG + (i  * width + j - 1)) + *(kernel+4) * *(matG + (i * width + j)) + *(kernel+ 5) * *(matG + (i * width + j + 1))
                                         + *(kernel+6) * *(matG + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matG + ((i + 1) * width + j)) + *(kernel+8) * *(matG + ((i + 1) * width + j + 1)))%255;
-            */
+            *(rMatG + (i * width + j)) = conv < 0 ? 0 : conv;
             /*Convolucion para el canal B*/
 
             //*(rMatB + (i * width + j)) = 0;
 
-            /*
-            *(rMatB + (i * width + j)) = (*(kernel) * *(matB + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matB + ((i - 1) * width + j)) + *(kernel + 2) * *(matB + ((i - 1) * width + j + 1))
+            
+            conv = (*(kernel) * *(matB + ((i - 1) * width + j - 1)) + *(kernel+1) * *(matB + ((i - 1) * width + j)) + *(kernel + 2) * *(matB + ((i - 1) * width + j + 1))
                                         + *(kernel+3) * *(matB + (i  * width + j - 1)) + *(kernel+4) * *(matB + (i * width + j)) + *(kernel+ 5) * *(matB + (i * width + j + 1))
                                         + *(kernel+6) * *(matB + ((i + 1) * width + j - 1)) + *(kernel+7) * *(matB + ((i + 1) * width + j)) + *(kernel+8) * *(matB + ((i + 1) * width + j + 1)))%255;
-            */
+            *(rMatB + (i * width + j)) = conv < 0 ? 0 : conv;
 
         }
     }
