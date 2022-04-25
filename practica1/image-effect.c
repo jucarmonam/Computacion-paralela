@@ -11,6 +11,8 @@
 #include <pthread.h>
 #include <math.h>
 #include <string.h>
+#include <sys/time.h>
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image/stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
@@ -108,8 +110,10 @@ int main(int argc, char *argv[])
     FILE *fp;
     /*Declarar la variable para guardar la imagen*/
     unsigned char *img, *resImg;
-    /**/
+    /*Variable para iteración*/
     int i;
+    /*Variables necesarias para medir tiempos*/
+    struct timeval tval_before, tval_after, tval_result;
     /*Creación de matriz con los posibles kernel*/
     int kernels[6][9] = {
         {-1, 0, 1, -2, 0, 2, -1, 0, 1},     // Border detection (Sobel)
@@ -171,6 +175,8 @@ int main(int argc, char *argv[])
     rMatR = (int *)calloc(height * width, sizeof(int));
     rMatG = (int *)calloc(height * width, sizeof(int));
     rMatB = (int *)calloc(height * width, sizeof(int));
+    /*Medición de tiempo de inicio*/
+    gettimeofday(&tval_before, NULL);
     /*Paralelizar el algoritmo*/
     for (i = 0; i < nThreads; i++)
     {
@@ -182,6 +188,8 @@ int main(int argc, char *argv[])
     {
         pthread_join(thread[i], NULL);
     }
+    /*Medición de tiempo de finalización*/
+    gettimeofday(&tval_after, NULL);
     /*Exportar la imagen resultante*/
     /*Reservar el espacio de memoria para la imagen resultante*/
     resImg = malloc(width * height * channels);
@@ -191,6 +199,16 @@ int main(int argc, char *argv[])
         exit(1);
     }
     joinMatrix(rMatR, rMatG, rMatB, width, height, channels, resImg, img);
+    /*Calcular los tiempos en tval_result*/
+    timersub(&tval_after, &tval_before, &tval_result);
+    /*Imprimir informe*/
+    printf("------------------------------------------------------------------------------\n");
+    printf("Número de hilos: %d,  Imagen carga: %s,   Imagen exportada: %s\n", nThreads, loadPath, savePath);
+    printf("Resolución: %dp,  Número de kernel (Parámetro): %d\n", height, argKer);
+    printf("Imagen exportada: %s\n", savePath);
+    printf("Tiempo de ejecución: %ld.%06ld s \n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+    printf("Resúmen: \t%d\t%ld.%06ld\t%d\t\n", nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec, height);
+
     /*Guardar la imagen con el nombre especificado*/
     if (strstr(savePath, ".png"))
         stbi_write_png(savePath, width, height, channels, resImg, width * channels);

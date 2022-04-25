@@ -1,0 +1,123 @@
+
+------------------------------------------------------------------------------
+PRUEBAS 720p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.042220 s 
+Resúmen: 	1	0.042220	720	
+------------------------------------------------------------------------------
+Número de hilos: 2,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.022812 s 
+Resúmen: 	2	0.022812	720	
+------------------------------------------------------------------------------
+Número de hilos: 4,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.011065 s 
+Resúmen: 	4	0.011065	720	
+------------------------------------------------------------------------------
+Número de hilos: 8,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.010980 s 
+Resúmen: 	8	0.010980	720	
+------------------------------------------------------------------------------
+Número de hilos: 16,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.012735 s 
+Resúmen: 	16	0.012735	720	
+------------------------------------------------------------------------------
+Número de hilos: 32,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.015324 s 
+Resúmen: 	32	0.015324	720	
+
+------------------------------------------------------------------------------
+PRUEBAS 1080p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/1080p/img_1_res.jpg
+Tiempo de ejecución: 0.090767 s 
+Resúmen: 	1	0.090767	1080	
+------------------------------------------------------------------------------
+Número de hilos: 2,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/1080p/img_1_res.jpg
+Tiempo de ejecución: 0.048387 s 
+Resúmen: 	2	0.048387	1080	
+------------------------------------------------------------------------------
+Número de hilos: 4,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/1080p/img_1_res.jpg
+Tiempo de ejecución: 0.024803 s 
+Resúmen: 	4	0.024803	1080	
+------------------------------------------------------------------------------
+Número de hilos: 8,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/1080p/img_1_res.jpg
+Tiempo de ejecución: 0.024756 s 
+Resúmen: 	8	0.024756	1080	
+------------------------------------------------------------------------------
+Número de hilos: 16,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/1080p/img_1_res.jpg
+Tiempo de ejecución: 0.028538 s 
+Resúmen: 	16	0.028538	1080	
+------------------------------------------------------------------------------
+Número de hilos: 32,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/1080p/img_1_res.jpg
+Tiempo de ejecución: 0.030082 s 
+Resúmen: 	32	0.030082	1080	
+
+------------------------------------------------------------------------------
+PRUEBAS 4k
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: ./img/4k/img_1.jpg,   Imagen exportada: ./img/4k/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/4k/img_1_res.jpg
+Tiempo de ejecución: 0.370343 s 
+Resúmen: 	1	0.370343	2160	
+------------------------------------------------------------------------------
+Número de hilos: 2,  Imagen carga: ./img/4k/img_1.jpg,   Imagen exportada: ./img/4k/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/4k/img_1_res.jpg
+Tiempo de ejecución: 0.188142 s 
+Resúmen: 	2	0.188142	2160	
+------------------------------------------------------------------------------
+Número de hilos: 4,  Imagen carga: ./img/4k/img_1.jpg,   Imagen exportada: ./img/4k/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/4k/img_1_res.jpg
+Tiempo de ejecución: 0.099522 s 
+Resúmen: 	4	0.099522	2160	
+------------------------------------------------------------------------------
+Número de hilos: 8,  Imagen carga: ./img/4k/img_1.jpg,   Imagen exportada: ./img/4k/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/4k/img_1_res.jpg
+Tiempo de ejecución: 0.103639 s 
+Resúmen: 	8	0.103639	2160	
+------------------------------------------------------------------------------
+Número de hilos: 16,  Imagen carga: ./img/4k/img_1.jpg,   Imagen exportada: ./img/4k/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/4k/img_1_res.jpg
+Tiempo de ejecución: 0.104076 s 
+Resúmen: 	16	0.104076	2160	
+------------------------------------------------------------------------------
+Número de hilos: 32,  Imagen carga: ./img/4k/img_1.jpg,   Imagen exportada: ./img/4k/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/4k/img_1_res.jpg
+Tiempo de ejecución: 0.104643 s 
+Resúmen: 	32	0.104643	2160	
