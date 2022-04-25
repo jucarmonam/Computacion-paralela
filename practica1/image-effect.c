@@ -19,6 +19,19 @@
 #define R_ARGS 4
 #define EXPORT_QUALITY 100
 
+/*Crear las tres matrices para cada canal de color*/
+int *matR, *matG, *matB;
+/*Crear las tres matrices resultanres*/
+int *rMatR, *rMatG, *rMatB;
+
+/*Declarar las variables necesarias para leer la imagen*/
+int width = 0, height = 0, channels = 0;
+
+/*Variable para el número de hilos*/
+int nThreads = 0;
+
+int *ker;
+
 void initializeMatrix(int *matR, int *matG, int *matB, int width, int height, int channels, unsigned char *img)
 {
     int i = 0, j = 0;
@@ -49,25 +62,55 @@ void joinMatrix(int *matR, int *matG, int *matB, int width, int height, int chan
     }
 }
 
+void *applyFilter(void *arg)
+{
+    /*Variables necesarias para la convolución*/
+    int thread_id = *(int *)arg;
+    int startPos = (thread_id < (width * height) % nThreads) ? ((width * height) / nThreads) * thread_id + thread_id : ((width * height) / nThreads) * thread_id + (width * height) % nThreads;
+    int endPos = (thread_id < (width * height) % nThreads) ? startPos + ((width * height) / nThreads) : startPos + ((width * height) / nThreads) - 1;
+    int conv = 0;
+    /*Calcular la posición inicial en términos de i y j*/
+    int i = (startPos / width), j = (startPos % width);
+    /*Realizar la convolucion*/
+    for (startPos; startPos < endPos; startPos++)
+    {
+        /*Ignorar la convolucion en los bordes*/
+        if (i > 0 && i < height - 1 && j > 0 && j < width - 1)
+        {
+            /*Convolucion para el canal R*/
+            conv = (*(ker) * *(matR + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matR + ((i - 1) * width + j)) + *(ker + 2) * *(matR + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matR + (i * width + j - 1)) + *(ker + 4) * *(matR + (i * width + j)) + *(ker + 5) * *(matR + (i * width + j + 1)) + *(ker + 6) * *(matR + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matR + ((i + 1) * width + j)) + *(ker + 8) * *(matR + ((i + 1) * width + j + 1))) % 255;
+            *(rMatR + (i * width + j)) = conv < 0 ? 0 : conv;
+
+            /*Convolucion para el canal G*/
+            conv = (*(ker) * *(matG + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matG + ((i - 1) * width + j)) + *(ker + 2) * *(matG + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matG + (i * width + j - 1)) + *(ker + 4) * *(matG + (i * width + j)) + *(ker + 5) * *(matG + (i * width + j + 1)) + *(ker + 6) * *(matG + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matG + ((i + 1) * width + j)) + *(ker + 8) * *(matG + ((i + 1) * width + j + 1))) % 255;
+            *(rMatG + (i * width + j)) = conv < 0 ? 0 : conv;
+
+            /*Convolucion para el canal B*/
+            conv = (*(ker) * *(matB + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matB + ((i - 1) * width + j)) + *(ker + 2) * *(matB + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matB + (i * width + j - 1)) + *(ker + 4) * *(matB + (i * width + j)) + *(ker + 5) * *(matB + (i * width + j + 1)) + *(ker + 6) * *(matB + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matB + ((i + 1) * width + j)) + *(ker + 8) * *(matB + ((i + 1) * width + j + 1))) % 255;
+            *(rMatB + (i * width + j)) = conv < 0 ? 0 : conv;
+        }
+        j += 1;
+        if (j == width)
+        {
+            i += 1;
+            j = 0;
+        }
+    }
+}
+
 int main(int argc, char *argv[])
 {
     /*Declarar los string de lectura y escritura*/
     char *loadPath, *savePath;
     /*Variable para escoger el kernel*/
     int argKer = 0;
-    /*Variable para el número de hilos*/
-    int nThreads = 0;
     /*Declaración de variable para la escritura del archivo*/
     FILE *fp;
-    /*Declarar las variables necesarias para leer la imagen*/
-    int width = 0, height = 0, channels = 0;
     /*Declarar la variable para guardar la imagen*/
     unsigned char *img, *resImg;
-    /*Crear las tres matrices para cada canal de color*/
-    int *matR, *matG, *matB;
-    /*Crear las tres matrices resultanres*/
-    int *rMatR, *rMatG, *rMatB;
     /**/
+    int i;
+    /*Creación de matriz con los posibles kernel*/
     int kernels[6][9] = {
         {-1, 0, 1, -2, 0, 2, -1, 0, 1},     // Border detection (Sobel)
         {1, -2, 1, -2, 5, -2, 1, -2, 1},    // Sharpen
@@ -76,9 +119,6 @@ int main(int argc, char *argv[])
         {-1, -1, 0, -1, 0, 1, 0, 1, 1},     // Estampado en relieve
         {-1, -1, -1, -1, 8, -1, -1, -1, -1} // Border detection (Sobel2)
     };
-    int *ker;
-    /**/
-    int i = 0, j = 0, conv = 0;
     /*Verificar que la cantidad de argumentos sea la correcta*/
     if ((argc - 1) < R_ARGS)
     {
@@ -97,10 +137,15 @@ int main(int argc, char *argv[])
         printf("El número de hilos ingresado no es válido \n");
         exit(1);
     }
-    if(argKer > 5){
+    if (argKer > 5)
+    {
         printf("El parámetro de kernel debe ser menor o igual a 5 \n");
         exit(1);
     }
+    /*Declaración de variables de paralelización*/
+    int threadId[nThreads];
+    pthread_t thread[nThreads];
+    /*Cargar en el ker el kernel escogido por el usuario*/
     ker = *(kernels + argKer);
     /*Cargar la imagen usando el parámetro con el nombre*/
     img = stbi_load(loadPath, &width, &height, &channels, 0);
@@ -126,21 +171,16 @@ int main(int argc, char *argv[])
     rMatR = (int *)calloc(height * width, sizeof(int));
     rMatG = (int *)calloc(height * width, sizeof(int));
     rMatB = (int *)calloc(height * width, sizeof(int));
-    /*Operación de convolución*/
-    for (i = 1; i < height - 1; i++)
+    /*Paralelizar el algoritmo*/
+    for (i = 0; i < nThreads; i++)
     {
-        for (j = 1; j < width - 1; j++)
-        {
-            /*Convolucion para el canal R*/
-            conv = (*(ker) * *(matR + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matR + ((i - 1) * width + j)) + *(ker + 2) * *(matR + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matR + (i * width + j - 1)) + *(ker + 4) * *(matR + (i * width + j)) + *(ker + 5) * *(matR + (i * width + j + 1)) + *(ker + 6) * *(matR + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matR + ((i + 1) * width + j)) + *(ker + 8) * *(matR + ((i + 1) * width + j + 1))) % 255;
-            *(rMatR + (i * width + j)) = conv < 0 ? 0 : conv;
-            /*Convolucion para el canal G*/
-            conv = (*(ker) * *(matG + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matG + ((i - 1) * width + j)) + *(ker + 2) * *(matG + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matG + (i * width + j - 1)) + *(ker + 4) * *(matG + (i * width + j)) + *(ker + 5) * *(matG + (i * width + j + 1)) + *(ker + 6) * *(matG + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matG + ((i + 1) * width + j)) + *(ker + 8) * *(matG + ((i + 1) * width + j + 1))) % 255;
-            *(rMatG + (i * width + j)) = conv < 0 ? 0 : conv;
-            /*Convolucion para el canal B*/
-            conv = (*(ker) * *(matB + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matB + ((i - 1) * width + j)) + *(ker + 2) * *(matB + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matB + (i * width + j - 1)) + *(ker + 4) * *(matB + (i * width + j)) + *(ker + 5) * *(matB + (i * width + j + 1)) + *(ker + 6) * *(matB + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matB + ((i + 1) * width + j)) + *(ker + 8) * *(matB + ((i + 1) * width + j + 1))) % 255;
-            *(rMatB + (i * width + j)) = conv < 0 ? 0 : conv;
-        }
+        threadId[i] = i;
+        pthread_create(&thread[i], NULL, (void *)applyFilter, (void *)&threadId[i]);
+    }
+
+    for (i = 0; i < nThreads; i++)
+    {
+        pthread_join(thread[i], NULL);
     }
     /*Exportar la imagen resultante*/
     /*Reservar el espacio de memoria para la imagen resultante*/
