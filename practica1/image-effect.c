@@ -207,8 +207,16 @@ int main(int argc, char *argv[])
     printf("Resolución: %dp,  Número de kernel (Parámetro): %d\n", height, argKer);
     printf("Imagen exportada: %s\n", savePath);
     printf("Tiempo de ejecución: %ld.%06ld s \n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
-    printf("Resúmen: \t%d\t%ld.%06ld\t%d\t\n", nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec, height);
-
+    printf("Resumen: (RES, HILOS, PARAM, TIEMPO) \t%dp\t%d\t%d\t%ld.%06ld\t\n", height, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+    /* Escribir los resultados en un csv*/
+    fp = fopen("times.csv", "a");
+    if (fp == NULL)
+    {
+        printf("Error al abrir el archivo \n");
+        exit(1);
+    }
+    fprintf(fp, "%d,%d,%d,%ld.%06ld\n", height, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+    fclose(fp);
     /*Guardar la imagen con el nombre especificado*/
     if (strstr(savePath, ".png"))
         stbi_write_png(savePath, width, height, channels, resImg, width * channels);
