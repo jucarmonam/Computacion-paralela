@@ -74,7 +74,7 @@ void *applyFilter(void *arg)
     /*Calcular la posición inicial en términos de i y j*/
     int i = (startPos / width), j = (startPos % width);
     /*Realizar la convolucion*/
-    for (startPos; startPos < endPos; startPos++)
+    for (startPos; startPos <= endPos; startPos++)
     {
         /*Ignorar la convolucion en los bordes*/
         if (i > 0 && i < height - 1 && j > 0 && j < width - 1)
