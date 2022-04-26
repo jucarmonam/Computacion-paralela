@@ -146,6 +146,8 @@ int main(int argc, char *argv[])
         printf("El parámetro de kernel debe ser menor o igual a 5 \n");
         exit(1);
     }
+    /*Medición de tiempo de inicio*/
+    gettimeofday(&tval_before, NULL);
     /*Declaración de variables de paralelización*/
     int threadId[nThreads];
     pthread_t thread[nThreads];
@@ -175,8 +177,6 @@ int main(int argc, char *argv[])
     rMatR = (int *)calloc(height * width, sizeof(int));
     rMatG = (int *)calloc(height * width, sizeof(int));
     rMatB = (int *)calloc(height * width, sizeof(int));
-    /*Medición de tiempo de inicio*/
-    gettimeofday(&tval_before, NULL);
     /*Paralelizar el algoritmo*/
     for (i = 0; i < nThreads; i++)
     {
@@ -199,6 +199,11 @@ int main(int argc, char *argv[])
         exit(1);
     }
     joinMatrix(rMatR, rMatG, rMatB, width, height, channels, resImg, img);
+    /*Guardar la imagen con el nombre especificado*/
+    if (strstr(savePath, ".png"))
+        stbi_write_png(savePath, width, height, channels, resImg, width * channels);
+    else
+        stbi_write_jpg(savePath, width, height, channels, resImg, EXPORT_QUALITY);
     /*Calcular los tiempos en tval_result*/
     timersub(&tval_after, &tval_before, &tval_result);
     /*Imprimir informe*/
@@ -217,11 +222,6 @@ int main(int argc, char *argv[])
     }
     fprintf(fp, "%d,%d,%d,%ld.%06ld\n", height, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
     fclose(fp);
-    /*Guardar la imagen con el nombre especificado*/
-    if (strstr(savePath, ".png"))
-        stbi_write_png(savePath, width, height, channels, resImg, width * channels);
-    else
-        stbi_write_jpg(savePath, width, height, channels, resImg, EXPORT_QUALITY);
     /*Liberar memoria*/
     free(matR);
     free(matG);
