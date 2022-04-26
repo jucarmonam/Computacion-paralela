@@ -188,8 +188,6 @@ int main(int argc, char *argv[])
     {
         pthread_join(thread[i], NULL);
     }
-    /*Medición de tiempo de finalización*/
-    gettimeofday(&tval_after, NULL);
     /*Exportar la imagen resultante*/
     /*Reservar el espacio de memoria para la imagen resultante*/
     resImg = malloc(width * height * channels);
@@ -204,6 +202,8 @@ int main(int argc, char *argv[])
         stbi_write_png(savePath, width, height, channels, resImg, width * channels);
     else
         stbi_write_jpg(savePath, width, height, channels, resImg, EXPORT_QUALITY);
+    /*Medición de tiempo de finalización*/
+    gettimeofday(&tval_after, NULL);
     /*Calcular los tiempos en tval_result*/
     timersub(&tval_after, &tval_before, &tval_result);
     /*Imprimir informe*/
