@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
     if ((argc - 1) < R_ARGS)
     {
         printf("Son necesarios %d argumentos para el funcionamiento\n", R_ARGS);
-        printf("Para una correcta ejecución: ./main input_image output_image parameter threads\n");
+        printf("Para una correcta ejecución: ./my-effect input_image output_image kernel_parameter nThreads\n");
         exit(1);
     }
     /*Cargar en las variables los parametros*/
