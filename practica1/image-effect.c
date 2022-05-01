@@ -20,6 +20,8 @@
 
 #define R_ARGS 4
 #define EXPORT_QUALITY 100
+/*Verificar que el tamaño del PAD sea óptimo*/
+#define PAD 16
 
 /*Crear las tres matrices para cada canal de color*/
 int *matR, *matG, *matB;
@@ -55,9 +57,9 @@ void joinMatrix(int *matR, int *matG, int *matB, int width, int height, int chan
     {
         for (j = 0; j < width; j++)
         {
-            *(resImg + (channels * (i * width + j))) = *(matR + (i * width + j));
-            *(resImg + (channels * (i * width + j) + 1)) = *(matG + (i * width + j));
-            *(resImg + (channels * (i * width + j) + 2)) = *(matB + (i * width + j));
+            *(resImg + (channels * (i * width + j))) = *(matR + PAD * (i * width + j));
+            *(resImg + (channels * (i * width + j) + 1)) = *(matG + PAD * (i * width + j));
+            *(resImg + (channels * (i * width + j) + 2)) = *(matB + PAD * (i * width + j));
             if (channels == 4)
                 *(resImg + (channels * (i * width + j) + 3)) = *(img + (channels * (i * width + j) + 3));
         }
@@ -81,15 +83,15 @@ void *applyFilter(void *arg)
         {
             /*Convolucion para el canal R*/
             conv = (*(ker) * *(matR + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matR + ((i - 1) * width + j)) + *(ker + 2) * *(matR + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matR + (i * width + j - 1)) + *(ker + 4) * *(matR + (i * width + j)) + *(ker + 5) * *(matR + (i * width + j + 1)) + *(ker + 6) * *(matR + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matR + ((i + 1) * width + j)) + *(ker + 8) * *(matR + ((i + 1) * width + j + 1))) % 255;
-            *(rMatR + (i * width + j)) = conv < 0 ? 0 : conv;
+            *(rMatR + PAD * (i * width + j)) = conv < 0 ? 0 : conv;
 
             /*Convolucion para el canal G*/
             conv = (*(ker) * *(matG + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matG + ((i - 1) * width + j)) + *(ker + 2) * *(matG + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matG + (i * width + j - 1)) + *(ker + 4) * *(matG + (i * width + j)) + *(ker + 5) * *(matG + (i * width + j + 1)) + *(ker + 6) * *(matG + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matG + ((i + 1) * width + j)) + *(ker + 8) * *(matG + ((i + 1) * width + j + 1))) % 255;
-            *(rMatG + (i * width + j)) = conv < 0 ? 0 : conv;
+            *(rMatG + PAD * (i * width + j)) = conv < 0 ? 0 : conv;
 
             /*Convolucion para el canal B*/
             conv = (*(ker) * *(matB + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matB + ((i - 1) * width + j)) + *(ker + 2) * *(matB + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matB + (i * width + j - 1)) + *(ker + 4) * *(matB + (i * width + j)) + *(ker + 5) * *(matB + (i * width + j + 1)) + *(ker + 6) * *(matB + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matB + ((i + 1) * width + j)) + *(ker + 8) * *(matB + ((i + 1) * width + j + 1))) % 255;
-            *(rMatB + (i * width + j)) = conv < 0 ? 0 : conv;
+            *(rMatB + PAD * (i * width + j)) = conv < 0 ? 0 : conv;
         }
         j += 1;
         if (j == width)
@@ -146,8 +148,6 @@ int main(int argc, char *argv[])
         printf("El parámetro de kernel debe ser menor o igual a 5 \n");
         exit(1);
     }
-    /*Medición de tiempo de inicio*/
-    gettimeofday(&tval_before, NULL);
     /*Declaración de variables de paralelización*/
     int threadId[nThreads];
     pthread_t thread[nThreads];
@@ -161,6 +161,8 @@ int main(int argc, char *argv[])
         printf("Error al cargar la imagen \n");
         exit(1);
     }
+    /*Medición de tiempo de inicio*/
+    gettimeofday(&tval_before, NULL);
     /*Crear cada matriz de Color dependiendo del tamaño*/
     matR = (int *)malloc(height * width * sizeof(int));
     matG = (int *)malloc(height * width * sizeof(int));
@@ -174,9 +176,9 @@ int main(int argc, char *argv[])
     initializeMatrix(matR, matG, matB, width, height, channels, img);
     /*Logica del filtro*/
     /*Crear las matrices de Color con para los resultados*/
-    rMatR = (int *)calloc(height * width, sizeof(int));
-    rMatG = (int *)calloc(height * width, sizeof(int));
-    rMatB = (int *)calloc(height * width, sizeof(int));
+    rMatR = (int *)calloc(height * width * PAD, sizeof(int));
+    rMatG = (int *)calloc(height * width * PAD, sizeof(int));
+    rMatB = (int *)calloc(height * width * PAD, sizeof(int));
     /*Paralelizar el algoritmo*/
     for (i = 0; i < nThreads; i++)
     {
@@ -197,13 +199,13 @@ int main(int argc, char *argv[])
         exit(1);
     }
     joinMatrix(rMatR, rMatG, rMatB, width, height, channels, resImg, img);
+    /*Medición de tiempo de finalización*/
+    gettimeofday(&tval_after, NULL);
     /*Guardar la imagen con el nombre especificado*/
     if (strstr(savePath, ".png"))
         stbi_write_png(savePath, width, height, channels, resImg, width * channels);
     else
         stbi_write_jpg(savePath, width, height, channels, resImg, EXPORT_QUALITY);
-    /*Medición de tiempo de finalización*/
-    gettimeofday(&tval_after, NULL);
     /*Calcular los tiempos en tval_result*/
     timersub(&tval_after, &tval_before, &tval_result);
     /*Imprimir informe*/
