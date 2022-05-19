@@ -66,7 +66,7 @@ void joinMatrix(int *matR, int *matG, int *matB, int width, int height, int chan
     }
 }
 
-int applyFilter(int thread_id)
+void applyFilter(int thread_id)
 {
     /*Variables necesarias para la convolución*/
     int startPos = (thread_id < (width * height) % nThreads) ? ((width * height) / nThreads) * thread_id + thread_id : ((width * height) / nThreads) * thread_id + (width * height) % nThreads;
@@ -99,7 +99,6 @@ int applyFilter(int thread_id)
             j = 0;
         }
     }
-    return 0;
 }
 
 int main(int argc, char *argv[])
@@ -148,9 +147,6 @@ int main(int argc, char *argv[])
         printf("El parámetro de kernel debe ser menor o igual a 5 \n");
         exit(1);
     }
-    /*Declaración de variables de paralelización*/
-    int threadId[nThreads];
-    pthread_t thread[nThreads];
     /*Cargar en el ker el kernel escogido por el usuario*/
     ker = *(kernels + argKer);
     /*Cargar la imagen usando el parámetro con el nombre*/
