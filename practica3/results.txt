@@ -1,0 +1,14 @@
+El parámetro de kernel debe ser menor o igual a 5 
+El parámetro de kernel debe ser menor o igual a 5 
+------------------------------------------------------------------------------
+Número de hilos: 6,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 1
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.047039 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	720p	6	1	0.047039	
+------------------------------------------------------------------------------
+Número de hilos: 6,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.050688 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	720p	6	0	0.050688	

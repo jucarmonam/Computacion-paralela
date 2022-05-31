@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/sebastian/Desktop/Paralela/1/Computacion-paralela/practica3'
+make: Leaving directory '/home/sebastian/Desktop/Paralela/1/Computacion-paralela/practica3'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
