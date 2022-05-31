@@ -20,9 +20,9 @@ else
     echo $mp
     echo $cores
 
-    for (( i=1; i<=$mp; i++ ))
+    for (( i=1; i<=$mp; i+=2 ))
     do
-        for (( j=1; j<=$cores; j++ ))
+        for (( j=1; j<=$cores; j+=10 ))
         do
             echo "$i , $j"
         done
