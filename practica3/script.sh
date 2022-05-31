@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 PARAM=0
 echo "------------------------------------------------"
 echo "Computación paralela y distribuida - práctica 3"
@@ -13,9 +13,25 @@ if [ $gpuInfo = "-1" ]; then
     echo "La GPU del sistema no es compatible con CUDA"
 else
     echo "La GPU del sistema es compatible con CUDA"
-    echo "Compilando el programa ..."
-    cd ../
-    nvcc image-effect.cu -o my-effect
-    echo "Compilación terminada, realizando pruebas ..."
-    ./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM $gpuInfo >> results.txt
+    
+    mp=$(echo "$gpuInfo" | cut -d "_" -f 1)
+    cores=$(echo "$gpuInfo" | cut -d "_" -f 2)
+
+    echo $mp
+    echo $cores
+
+    for (( i=1; i<=$mp; i++ ))
+    do
+        for (( j=1; j<=$cores; j++ ))
+        do
+            echo "$i , $j"
+        done
+    done
+
+
+    #echo "Compilando el programa ..."
+    #cd ../
+    #nvcc image-effect.cu -o my-effect
+    #echo "Compilación terminada, realizando pruebas ..."
+    #./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM $gpuInfo >> results.txt
 fi
