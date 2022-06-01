@@ -63,18 +63,56 @@ void joinMatrix(int *matR, int *matG, int *matB, int width, int height, int chan
     }
 }
 
-__global__ void applyFilter(int *matR, int *matG, int *matB, int *rMatR, int *rMatG, int *rMatB, int width, int height, int nThreads, int *ker)
+__global__ void applyFilter(int *matR, int *matG, int *matB, int *rMatR, int *rMatG, int *rMatB, int width, int height, int nBlocks, int nThreads, int *ker)
 {
+    __shared__ int *tMatR;
+    __shared__ int sizeBlock;
     int i = 0, j = 0;
-    for (i = 0; i < height; i++)
+    int sPosBlock = (blockIdx.x < (width * height) % nBlocks) ? ((width * height) / nBlocks) * blockIdx.x + blockIdx.x : ((width * height) / nBlocks) * blockIdx.x + (width * height) % nBlocks;
+    int ePosBlock = (blockIdx.x < (width * height) % nBlocks) ? sPosBlock + ((width * height) / nBlocks) : sPosBlock + ((width * height) / nBlocks) - 1;
+    sizeBlock = ePosBlock - sPosBlock + 1;
+    tMatR = (int *)malloc((sizeBlock) * sizeof(int));
+    if (tMatR == NULL)
     {
-        for (j = 0; j < width; j++)
-        {
-            *(rMatR + (i * width + j)) = 0;
-            *(rMatG + (i * width + j)) = 255;
-            *(rMatB + (i * width + j)) = 0;
-        }
+        printf("Error al crear las matrices, problema con malloc \n");
     }
+    int sPosThr = (threadIdx.x < sizeBlock % nThreads) ? (sizeBlock / nThreads) * threadIdx.x + threadIdx.x : (sizeBlock / nThreads) * threadIdx.x + (sizeBlock) % nThreads;
+    int ePosThr = (threadIdx.x < sizeBlock % nThreads) ? sPosThr + (sizeBlock / nThreads) : sPosThr + (sizeBlock / nThreads) - 1;
+
+    printf("%d : %d  -  %d : %d   ___  %d  ***   %d : %d\n", blockIdx.x, threadIdx.x, sPosBlock, ePosBlock, sizeBlock, sPosThr, ePosThr);
+
+    for (i = 0; i <= ePosThr; i++)
+        *(tMatR + i) = *(matR + i + sPosBlock);
+
+    /*for (i = 0; i <= ePosThr; i++)
+    {
+        printf("%d ", *(tMatR + i));
+    }*/
+
+    __syncthreads();
+
+    for (i = 0; i <= ePosThr; i++)
+    {
+        *(rMatR + i + sPosBlock) = *(tMatR + i) - 150;
+    }
+
+    /*
+    if (tMatR == NULL)
+    {
+        printf("Error al crear las matrices, problema con malloc \n");
+    }
+
+    int sizeThMat = (threadIdx.x < sizeMat % nThreads) ? (sizeMat / nThreads) + 1 : sizeMat / nThreads;
+
+    for (int i = 0; i < sizeThMat; i++)
+    {
+        *(rMatR + i) = 80;
+    }
+    printf("%d : %d  -  %d \n", blockIdx.x, threadIdx.x, sizeThMat);
+    */
+
+    // int startPos = (thread_id < (width * height) % nThreads) ? ((width * height) / nThreads) * thread_id + thread_id : ((width * height) / nThreads) * thread_id + (width * height) % nThreads;
+    // int endPos = (thread_id < (width * height) % nThreads) ? startPos + ((width * height) / nThreads) : startPos + ((width * height) / nThreads) - 1;
 }
 
 int main(int argc, char *argv[])
@@ -116,8 +154,8 @@ int main(int argc, char *argv[])
     loadPath = *(argv + 1);
     savePath = *(argv + 2);
     argKer = atoi(*(argv + 3));
-    nThreads = atoi(*(argv + 4));
-    nBlocks = atoi(*(argv + 5));
+    nBlocks = atoi(*(argv + 4));
+    nThreads = atoi(*(argv + 5));
     /*Verificar que el número de hilos sea válido*/
     if (nThreads <= 0 || nBlocks <= 0)
     {
@@ -252,7 +290,7 @@ int main(int argc, char *argv[])
     }
 
     /*Paralelizar el algoritmo*/
-    applyFilter<<<nBlocks, nThreads>>>(d_MatR, d_MatG, d_MatB, d_rMatR, d_rMatG, d_rMatB, width, height, nBlocks * nThreads, ker);
+    applyFilter<<<nBlocks, nThreads>>>(d_MatR, d_MatG, d_MatB, d_rMatR, d_rMatG, d_rMatB, width, height, nBlocks, nThreads, ker);
 
     err = cudaGetLastError();
 
@@ -304,13 +342,16 @@ int main(int argc, char *argv[])
         stbi_write_jpg(savePath, width, height, channels, resImg, EXPORT_QUALITY);
     /*Calcular los tiempos en tval_result*/
     timersub(&tval_after, &tval_before, &tval_result);
+
     /*Imprimir informe*/
+    /*
     printf("------------------------------------------------------------------------------\n");
     printf("Número de hilos: %d,  Imagen carga: %s,   Imagen exportada: %s\n", nThreads, loadPath, savePath);
     printf("Resolución: %dp,  Número de kernel (Parámetro): %d\n", height, argKer);
     printf("Imagen exportada: %s\n", savePath);
     printf("Tiempo de ejecución: %ld.%06ld s \n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
     printf("Resumen: (RES, HILOS, PARAM, TIEMPO) \t%dp\t%d\t%d\t%ld.%06ld\t\n", height, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+    */
     /* Escribir los resultados en un csv*/
     fp = fopen("times.csv", "a");
     if (fp == NULL)

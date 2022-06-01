@@ -132,3 +132,89 @@ Resolución: 100p,  Número de kernel (Parámetro): 0
 Imagen exportada: res.png
 Tiempo de ejecución: 0.123846 s 
 Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.123846	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.086444 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.086444	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.117025 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.117025	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.066612 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.066612	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.107652 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.107652	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.078410 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.078410	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.077964 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.077964	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.112377 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.112377	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.108202 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.108202	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.114301 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.114301	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.115193 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.115193	
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.118653 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.118653	
+40001------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.123398 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.123398	
+40001 
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.120797 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.120797	
+40001  asdasdasdasd 
+------------------------------------------------------------------------------
+Número de hilos: 1,  Imagen carga: test.png,   Imagen exportada: res.png
+Resolución: 100p,  Número de kernel (Parámetro): 0
+Imagen exportada: res.png
+Tiempo de ejecución: 0.123231 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.123231	
