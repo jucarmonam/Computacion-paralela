@@ -218,3 +218,9 @@ Resolución: 100p,  Número de kernel (Parámetro): 0
 Imagen exportada: res.png
 Tiempo de ejecución: 0.123231 s 
 Resumen: (RES, HILOS, PARAM, TIEMPO) 	100p	1	0	0.123231	
+------------------------------------------------------------------------------
+Número de hilos: 100,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Imagen exportada: ./img/720p/img_1_res.jpg
+Tiempo de ejecución: 0.130266 s 
+Resumen: (RES, HILOS, PARAM, TIEMPO) 	720p	100	0	0.130266	

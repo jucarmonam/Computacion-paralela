@@ -33,6 +33,6 @@ else
     cd ../
     nvcc image-effect.cu -o my-effect
     echo "Compilación terminada, realizando pruebas ..."
-    #./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM 100 1 >> results.txt
-    ./my-effect test.png res.png $PARAM 12 128 #>> results.txt
+    ./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM 100 1 >> results.txt
+    #./my-effect test.png res.png $PARAM 12 128 #>> results.txt
 fi

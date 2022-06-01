@@ -30,6 +30,8 @@ int nBlocks = 0;
 int *matR, *matG, *matB;
 /*Crear las tres matrices del device*/
 int *d_MatR, *d_MatG, *d_MatB;
+/*Crear las tres matrices para cada canal de color*/
+int *rMatR, *rMatG, *rMatB;
 /*Crear las tres matrices resultantes del device*/
 int *d_rMatR, *d_rMatG, *d_rMatB;
 
@@ -63,56 +65,41 @@ void joinMatrix(int *matR, int *matG, int *matB, int width, int height, int chan
     }
 }
 
-__global__ void applyFilter(int *matR, int *matG, int *matB, int *rMatR, int *rMatG, int *rMatB, int width, int height, int nBlocks, int nThreads, int *ker)
+__global__ void applyFilter(int *matR, int *matG, int *matB, int *rMatR, int *rMatG, int *rMatB, int width, int height, int nThreads, int *ker)
 {
-    __shared__ int *tMatR;
-    __shared__ int sizeBlock;
-    int i = 0, j = 0;
-    int sPosBlock = (blockIdx.x < (width * height) % nBlocks) ? ((width * height) / nBlocks) * blockIdx.x + blockIdx.x : ((width * height) / nBlocks) * blockIdx.x + (width * height) % nBlocks;
-    int ePosBlock = (blockIdx.x < (width * height) % nBlocks) ? sPosBlock + ((width * height) / nBlocks) : sPosBlock + ((width * height) / nBlocks) - 1;
-    sizeBlock = ePosBlock - sPosBlock + 1;
-    tMatR = (int *)malloc((sizeBlock) * sizeof(int));
-    if (tMatR == NULL)
+    int thread_id = threadIdx.x + blockIdx.x * blockDim.x;
+  /*Variables necesarias para la convolución*/
+    int startPos = (thread_id < (width * height) % nThreads) ? ((width * height) / nThreads) * thread_id + thread_id : ((width * height) / nThreads) * thread_id + (width * height) % nThreads;
+    int endPos = (thread_id < (width * height) % nThreads) ? startPos + ((width * height) / nThreads) : startPos + ((width * height) / nThreads) - 1;
+    int conv = 0;
+
+    /*Calcular la posición inicial en términos de i y j*/
+    int i = (startPos / width), j = (startPos % width);
+
+    /*Realizar la convolucion*/
+    for (startPos; startPos <= endPos; startPos++)
     {
-        printf("Error al crear las matrices, problema con malloc \n");
+        /*Ignorar la convolucion en los bordes*/
+        if (i > 0 && i < height - 1 && j > 0 && j < width - 1)
+        {
+            conv = (*(ker) * *(matR + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matR + ((i - 1) * width + j)) + *(ker + 2) * *(matR + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matR + (i * width + j - 1)) + *(ker + 4) * *(matR + (i * width + j)) + *(ker + 5) * *(matR + (i * width + j + 1)) + *(ker + 6) * *(matR + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matR + ((i + 1) * width + j)) + *(ker + 8) * *(matR + ((i + 1) * width + j + 1))) % 255;
+            *(rMatR + (i * width + j)) = conv < 0 ? 0 : conv;
+
+            /*Convolucion para el canal G*/
+            conv = (*(ker) * *(matG + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matG + ((i - 1) * width + j)) + *(ker + 2) * *(matG + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matG + (i * width + j - 1)) + *(ker + 4) * *(matG + (i * width + j)) + *(ker + 5) * *(matG + (i * width + j + 1)) + *(ker + 6) * *(matG + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matG + ((i + 1) * width + j)) + *(ker + 8) * *(matG + ((i + 1) * width + j + 1))) % 255;
+            *(rMatG + (i * width + j)) = conv < 0 ? 0 : conv;
+
+            /*Convolucion para el canal B*/
+            conv = (*(ker) * *(matB + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matB + ((i - 1) * width + j)) + *(ker + 2) * *(matB + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matB + (i * width + j - 1)) + *(ker + 4) * *(matB + (i * width + j)) + *(ker + 5) * *(matB + (i * width + j + 1)) + *(ker + 6) * *(matB + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matB + ((i + 1) * width + j)) + *(ker + 8) * *(matB + ((i + 1) * width + j + 1))) % 255;
+            *(rMatB + (i * width + j)) = conv < 0 ? 0 : conv;
+        }
+        j += 1;
+        if (j == width)
+        {
+            i += 1;
+            j = 0;
+        }
     }
-    int sPosThr = (threadIdx.x < sizeBlock % nThreads) ? (sizeBlock / nThreads) * threadIdx.x + threadIdx.x : (sizeBlock / nThreads) * threadIdx.x + (sizeBlock) % nThreads;
-    int ePosThr = (threadIdx.x < sizeBlock % nThreads) ? sPosThr + (sizeBlock / nThreads) : sPosThr + (sizeBlock / nThreads) - 1;
-
-    printf("%d : %d  -  %d : %d   ___  %d  ***   %d : %d\n", blockIdx.x, threadIdx.x, sPosBlock, ePosBlock, sizeBlock, sPosThr, ePosThr);
-
-    for (i = 0; i <= ePosThr; i++)
-        *(tMatR + i) = *(matR + i + sPosBlock);
-
-    /*for (i = 0; i <= ePosThr; i++)
-    {
-        printf("%d ", *(tMatR + i));
-    }*/
-
-    __syncthreads();
-
-    for (i = 0; i <= ePosThr; i++)
-    {
-        *(rMatR + i + sPosBlock) = *(tMatR + i) - 150;
-    }
-
-    /*
-    if (tMatR == NULL)
-    {
-        printf("Error al crear las matrices, problema con malloc \n");
-    }
-
-    int sizeThMat = (threadIdx.x < sizeMat % nThreads) ? (sizeMat / nThreads) + 1 : sizeMat / nThreads;
-
-    for (int i = 0; i < sizeThMat; i++)
-    {
-        *(rMatR + i) = 80;
-    }
-    printf("%d : %d  -  %d \n", blockIdx.x, threadIdx.x, sizeThMat);
-    */
-
-    // int startPos = (thread_id < (width * height) % nThreads) ? ((width * height) / nThreads) * thread_id + thread_id : ((width * height) / nThreads) * thread_id + (width * height) % nThreads;
-    // int endPos = (thread_id < (width * height) % nThreads) ? startPos + ((width * height) / nThreads) : startPos + ((width * height) / nThreads) - 1;
 }
 
 int main(int argc, char *argv[])
@@ -135,6 +122,7 @@ int main(int argc, char *argv[])
     cudaError_t err = cudaSuccess;
     /*Creación de matriz con los posibles kernel*/
     int *ker;
+    int *d_ker;
     int kernels[6][9] = {
         {-1, 0, 1, -2, 0, 2, -1, 0, 1},     // Border detection (Sobel)
         {1, -2, 1, -2, 5, -2, 1, -2, 1},    // Sharpen
@@ -154,8 +142,8 @@ int main(int argc, char *argv[])
     loadPath = *(argv + 1);
     savePath = *(argv + 2);
     argKer = atoi(*(argv + 3));
-    nBlocks = atoi(*(argv + 4));
-    nThreads = atoi(*(argv + 5));
+    nThreads = atoi(*(argv + 4));
+    nBlocks = atoi(*(argv + 5));
     /*Verificar que el número de hilos sea válido*/
     if (nThreads <= 0 || nBlocks <= 0)
     {
@@ -183,7 +171,10 @@ int main(int argc, char *argv[])
     matR = (int *)malloc(height * width * size);
     matG = (int *)malloc(height * width * size);
     matB = (int *)malloc(height * width * size);
-    if (matR == NULL || matG == NULL || matB == NULL)
+    rMatR = (int *)malloc(height * width * size);
+    rMatG = (int *)malloc(height * width * size);
+    rMatB = (int *)malloc(height * width * size);
+    if (matR == NULL || matG == NULL || matB == NULL || rMatR == NULL || rMatG == NULL || rMatB == NULL)
     {
         printf("Error al crear las matrices, problema con malloc \n");
         exit(1);
@@ -191,6 +182,21 @@ int main(int argc, char *argv[])
 
     /*Inicializar las matrices con los valores de la imagen*/
     initializeMatrix(matR, matG, matB, width, height, channels, img);
+    
+    err = cudaMalloc((void **)&d_ker,size * 9);
+    if (err != cudaSuccess)
+    {
+        fprintf(stderr, "Failed to allocate device d_ker (error code %s)!\n", cudaGetErrorString(err));
+        exit(EXIT_FAILURE);
+    }
+
+    // Copy inputs to device
+    err = cudaMemcpy(d_ker, ker, size * 9, cudaMemcpyHostToDevice);
+    if (err != cudaSuccess)
+    {
+        fprintf(stderr, "Failed to copy ker from host to device (error code %s)!\n", cudaGetErrorString(err));
+        exit(EXIT_FAILURE);
+    }
 
     /*Logica del filtro*/
     /*Crear las matrices de Color con para los resultados*/
@@ -267,30 +273,8 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    // Copy inputs to device
-    err = cudaMemcpy(d_rMatR, matR, height * width * size, cudaMemcpyHostToDevice);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy MatR from host to device (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    err = cudaMemcpy(d_rMatG, matG, height * width * size, cudaMemcpyHostToDevice);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy MatG from host to device (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    err = cudaMemcpy(d_rMatB, matB, height * width * size, cudaMemcpyHostToDevice);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy MatB from host to device (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
     /*Paralelizar el algoritmo*/
-    applyFilter<<<nBlocks, nThreads>>>(d_MatR, d_MatG, d_MatB, d_rMatR, d_rMatG, d_rMatB, width, height, nBlocks, nThreads, ker);
+    applyFilter<<<nBlocks, nThreads>>>(d_MatR, d_MatG, d_MatB, d_rMatR, d_rMatG, d_rMatB, width, height, nBlocks * nThreads, d_ker);
 
     err = cudaGetLastError();
 
@@ -301,22 +285,22 @@ int main(int argc, char *argv[])
     }
 
     // Copy result back to host
-    err = cudaMemcpy(matR, d_rMatR, height * width * size, cudaMemcpyDeviceToHost);
+    err = cudaMemcpy(rMatR, d_rMatR, height * width * size, cudaMemcpyDeviceToHost);
     if (err != cudaSuccess)
     {
-        fprintf(stderr, "Failed to copy MatR from device to host (error code %s)!\n", cudaGetErrorString(err));
+        fprintf(stderr, "Failed to copy rMatR from device to host (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
-    err = cudaMemcpy(matG, d_rMatG, height * width * size, cudaMemcpyDeviceToHost);
+    err = cudaMemcpy(rMatG, d_rMatG, height * width * size, cudaMemcpyDeviceToHost);
     if (err != cudaSuccess)
     {
-        fprintf(stderr, "Failed to copy MatG from device to host (error code %s)!\n", cudaGetErrorString(err));
+        fprintf(stderr, "Failed to copy rMatG from device to host (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
-    err = cudaMemcpy(matB, d_rMatB, height * width * size, cudaMemcpyDeviceToHost);
+    err = cudaMemcpy(rMatB, d_rMatB, height * width * size, cudaMemcpyDeviceToHost);
     if (err != cudaSuccess)
     {
-        fprintf(stderr, "Failed to copy MatB from device to host (error code %s)!\n", cudaGetErrorString(err));
+        fprintf(stderr, "Failed to copy rMatB from device to host (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
 
@@ -331,7 +315,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    joinMatrix(matR, matG, matB, width, height, channels, resImg, img);
+    joinMatrix(rMatR, rMatG, rMatB, width, height, channels, resImg, img);
 
     /*Medición de tiempo de finalización*/
     gettimeofday(&tval_after, NULL);
@@ -342,16 +326,13 @@ int main(int argc, char *argv[])
         stbi_write_jpg(savePath, width, height, channels, resImg, EXPORT_QUALITY);
     /*Calcular los tiempos en tval_result*/
     timersub(&tval_after, &tval_before, &tval_result);
-
     /*Imprimir informe*/
-    /*
     printf("------------------------------------------------------------------------------\n");
     printf("Número de hilos: %d,  Imagen carga: %s,   Imagen exportada: %s\n", nThreads, loadPath, savePath);
     printf("Resolución: %dp,  Número de kernel (Parámetro): %d\n", height, argKer);
     printf("Imagen exportada: %s\n", savePath);
     printf("Tiempo de ejecución: %ld.%06ld s \n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
     printf("Resumen: (RES, HILOS, PARAM, TIEMPO) \t%dp\t%d\t%d\t%ld.%06ld\t\n", height, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
-    */
     /* Escribir los resultados en un csv*/
     fp = fopen("times.csv", "a");
     if (fp == NULL)
