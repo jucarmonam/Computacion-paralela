@@ -9,7 +9,7 @@ cd deviceQuery
 make >/dev/null
 gpuInfo=$(./deviceQuery)
 #Verificar que se tenga GPU Nvidia
-if [ $gpuInfo = "-1" ]; then
+if [ "$gpuInfo" = "-1" ]; then
     echo "La GPU del sistema no es compatible con CUDA"
 else
     echo "La GPU del sistema es compatible con CUDA"
