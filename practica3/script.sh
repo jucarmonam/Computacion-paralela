@@ -24,14 +24,15 @@ else
     do
         for (( j=1; j<=$cores; j+=10 ))
         do
-            echo "$i , $j"
+            echo -n ""
         done
     done
 
 
-    #echo "Compilando el programa ..."
-    #cd ../
-    #nvcc image-effect.cu -o my-effect
-    #echo "Compilación terminada, realizando pruebas ..."
-    #./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM $gpuInfo >> results.txt
+    echo "Compilando el programa ..."
+    cd ../
+    nvcc image-effect.cu -o my-effect
+    echo "Compilación terminada, realizando pruebas ..."
+    #./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM 100 1 >> results.txt
+    ./my-effect test.png res.png $PARAM 1 1 >> results.txt
 fi
