@@ -345,6 +345,10 @@ int main(int argc, char *argv[])
     cudaFree(d_MatR);
     cudaFree(d_MatG);
     cudaFree(d_MatB);
+    cudaFree(d_rMatR);
+    cudaFree(d_rMatG);
+    cudaFree(d_rMatB);
+    cudaFree(d_ker);
     free(resImg);
     stbi_image_free(img);
     return 0;

@@ -16,15 +16,28 @@ else
     
     mp=$(echo "$gpuInfo" | cut -d "_" -f 1)
     cores=$(echo "$gpuInfo" | cut -d "_" -f 2)
+    name=$(echo "$gpuInfo" | cut -d "_" -f 3)
 
-    echo "Se tienen (($mp)) multiprocesadores y (($cores)) cores por multiprocesador"
+
+    echo "GPU: $name"
+    echo "Se tienen $((mp)) multiprocesadores y $((cores)) cores por multiprocesador"
 
     echo "Compilando el programa ..."
     cd ../
     nvcc image-effect.cu -o my-effect -w
     echo "Compilación terminada, realizando pruebas ..."
-
-    printf "\n------------------------------------------------------------------------------\nPRUEBAS 720p\n------------------------------------------------------------------------------\n">> results.txt
+    echo "   ">> results.txt
+    echo "   ">> results.txt
+    echo "   ">> results.txt
+    echo "   ">> results.txt
+    echo "******************************************************************************">> results.txt
+    echo "   ">> results.txt
+    echo "Información de la GPU:  $name  " >> results.txt
+    echo "$((mp)) Multiprocesadores y $((cores)) Cores por multiprocesador " >> results.txt
+    echo "   ">> results.txt
+    echo "******************************************************************************">> results.txt
+    echo "   ">> results.txt
+    printf "PRUEBAS 720p\n------------------------------------------------------------------------------\n">> results.txt
     #Prueba base 1 - 1
     ./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM 1 1 >> results.txt
 

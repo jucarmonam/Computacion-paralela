@@ -93,7 +93,7 @@ int main(int argc, char **argv)
        cudaDriverGetVersion(&driverVersion);
        cudaRuntimeGetVersion(&runtimeVersion);
 
-       printf("%03d_%03d", deviceProp.multiProcessorCount, _ConvertSMVer2Cores(deviceProp.major, deviceProp.minor));
+       printf("%03d_%03d_%s", deviceProp.multiProcessorCount, _ConvertSMVer2Cores(deviceProp.major, deviceProp.minor), deviceProp.name);
        // finish
        exit(EXIT_SUCCESS);
 }
