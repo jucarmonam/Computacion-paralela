@@ -20,21 +20,6 @@
 #define R_ARGS 5
 #define EXPORT_QUALITY 100
 
-/*Variable para el número de hilos*/
-int nThreads = 0;
-
-/*Variable para el número de bloques*/
-int nBlocks = 0;
-
-/*Crear las tres matrices para cada canal de color*/
-int *matR, *matG, *matB;
-/*Crear las tres matrices del device*/
-int *d_MatR, *d_MatG, *d_MatB;
-/*Crear las tres matrices para cada canal de color*/
-int *rMatR, *rMatG, *rMatB;
-/*Crear las tres matrices resultantes del device*/
-int *d_rMatR, *d_rMatG, *d_rMatB;
-
 void initializeMatrix(int *matR, int *matG, int *matB, int width, int height, int channels, unsigned char *img)
 {
     int i = 0, j = 0;
@@ -68,7 +53,7 @@ void joinMatrix(int *matR, int *matG, int *matB, int width, int height, int chan
 __global__ void applyFilter(int *matR, int *matG, int *matB, int *rMatR, int *rMatG, int *rMatB, int width, int height, int nThreads, int *ker)
 {
     int thread_id = threadIdx.x + blockIdx.x * blockDim.x;
-  /*Variables necesarias para la convolución*/
+    /*Variables necesarias para la convolución*/
     int startPos = (thread_id < (width * height) % nThreads) ? ((width * height) / nThreads) * thread_id + thread_id : ((width * height) / nThreads) * thread_id + (width * height) % nThreads;
     int endPos = (thread_id < (width * height) % nThreads) ? startPos + ((width * height) / nThreads) : startPos + ((width * height) / nThreads) - 1;
     int conv = 0;
@@ -114,6 +99,18 @@ int main(int argc, char *argv[])
     unsigned char *img, *resImg;
     /*Declarar las variables necesarias para leer la imagen*/
     int width = 0, height = 0, channels = 0;
+    /*Variable para el número de hilos*/
+    int nThreads = 0;
+    /*Variable para el número de bloques*/
+    int nBlocks = 0;
+    /*Crear las tres matrices para cada canal de color*/
+    int *matR, *matG, *matB;
+    /*Crear las tres matrices del device*/
+    int *d_MatR, *d_MatG, *d_MatB;
+    /*Crear las tres matrices para cada canal de color*/
+    int *rMatR, *rMatG, *rMatB;
+    /*Crear las tres matrices resultantes del device*/
+    int *d_rMatR, *d_rMatG, *d_rMatB;
     /*Crear variable para el sizeof int*/
     int size = sizeof(int);
     /*Variables necesarias para medir tiempos*/
@@ -142,8 +139,8 @@ int main(int argc, char *argv[])
     loadPath = *(argv + 1);
     savePath = *(argv + 2);
     argKer = atoi(*(argv + 3));
-    nThreads = atoi(*(argv + 4));
-    nBlocks = atoi(*(argv + 5));
+    nBlocks = atoi(*(argv + 4));
+    nThreads = atoi(*(argv + 5));
     /*Verificar que el número de hilos sea válido*/
     if (nThreads <= 0 || nBlocks <= 0)
     {
@@ -182,8 +179,8 @@ int main(int argc, char *argv[])
 
     /*Inicializar las matrices con los valores de la imagen*/
     initializeMatrix(matR, matG, matB, width, height, channels, img);
-    
-    err = cudaMalloc((void **)&d_ker,size * 9);
+
+    err = cudaMalloc((void **)&d_ker, size * 9);
     if (err != cudaSuccess)
     {
         fprintf(stderr, "Failed to allocate device d_ker (error code %s)!\n", cudaGetErrorString(err));
@@ -328,11 +325,10 @@ int main(int argc, char *argv[])
     timersub(&tval_after, &tval_before, &tval_result);
     /*Imprimir informe*/
     printf("------------------------------------------------------------------------------\n");
-    printf("Número de hilos: %d,  Imagen carga: %s,   Imagen exportada: %s\n", nThreads, loadPath, savePath);
-    printf("Resolución: %dp,  Número de kernel (Parámetro): %d\n", height, argKer);
-    printf("Imagen exportada: %s\n", savePath);
+    printf("Número de bloques: %d,  Número de hilos: %d,  Imagen carga: %s\n", nBlocks, nThreads, loadPath);
+    printf("Resolución: %dp,  Número de kernel (Parámetro): %d, Imagen exportada: %s\n", height, argKer, savePath);
     printf("Tiempo de ejecución: %ld.%06ld s \n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
-    printf("Resumen: (RES, HILOS, PARAM, TIEMPO) \t%dp\t%d\t%d\t%ld.%06ld\t\n", height, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+    printf("Resumen: (RES, BLOQUES, HILOS, PARAM, TIEMPO) \t%dp\t%d\t%d\t%d\t%ld.%06ld\t\n", height, nBlocks, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
     /* Escribir los resultados en un csv*/
     fp = fopen("times.csv", "a");
     if (fp == NULL)
@@ -340,7 +336,7 @@ int main(int argc, char *argv[])
         printf("Error al abrir el archivo \n");
         exit(1);
     }
-    fprintf(fp, "%d,%d,%d,%ld.%06ld\n", height, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+    fprintf(fp, "%d,%d,%d,%d,%ld.%06ld\n", height, nBlocks, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
     fclose(fp);
     /*Liberar memoria*/
     free(matR);
