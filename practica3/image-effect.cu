@@ -162,8 +162,7 @@ int main(int argc, char *argv[])
         printf("Error al cargar la imagen \n");
         exit(1);
     }
-    /*Medición de tiempo de inicio*/
-    gettimeofday(&tval_before, NULL);
+    
     /*Crear cada matriz de Color dependiendo del tamaño*/
     matR = (int *)malloc(height * width * size);
     matG = (int *)malloc(height * width * size);
@@ -270,6 +269,9 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+    /*Medición de tiempo de inicio*/
+    gettimeofday(&tval_before, NULL);
+
     /*Paralelizar el algoritmo*/
     applyFilter<<<nBlocks, nThreads>>>(d_MatR, d_MatG, d_MatB, d_rMatR, d_rMatG, d_rMatB, width, height, nBlocks * nThreads, d_ker);
 
@@ -282,6 +284,9 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Failed to launch vectorAdd kernel (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
+
+    /*Medición de tiempo de finalización*/
+    gettimeofday(&tval_after, NULL);
 
     // Copy result back to host
     err = cudaMemcpy(rMatR, d_rMatR, height * width * size, cudaMemcpyDeviceToHost);
@@ -316,8 +321,7 @@ int main(int argc, char *argv[])
 
     joinMatrix(rMatR, rMatG, rMatB, width, height, channels, resImg, img);
 
-    /*Medición de tiempo de finalización*/
-    gettimeofday(&tval_after, NULL);
+    
     /*Guardar la imagen con el nombre especificado*/
     if (strstr(savePath, ".png"))
         stbi_write_png(savePath, width, height, channels, resImg, width * channels);

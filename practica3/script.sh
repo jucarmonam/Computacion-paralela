@@ -38,36 +38,20 @@ else
     echo "******************************************************************************">> results.txt
     echo "   ">> results.txt
     printf "PRUEBAS 720p\n------------------------------------------------------------------------------\n">> results.txt
-    #Prueba base 1 - 1
-    ./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM 1 1 >> results.txt
-    for (( i=1; i<=((2*$mp)); i=i*2 ))
+    
+
+    for res in {720,1080,2160}
     do
-        for (( j=10; j<=2*$cores; j+=20 ))
+        printf "\n-----------------------------------------------------------------------------\nPRUEBAS $res p\n------------------------------------------------------------------------------\n">> results.txt
+        for (( i=1; i<=((2*$mp)); i=i*2 ))
         do
-            ./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM $i $j >> results.txt
+            ./my-effect ./img/"$res"p/img_1.jpg ./img/"$res"p/img_1_res.jpg $PARAM $i 1 >> results.txt
+            for (( j=10; j<=2*$cores; j+=20 ))
+            do
+                ./my-effect ./img/"$res"p/img_1.jpg ./img/"$res"p/img_1_res.jpg $PARAM $i $j >> results.txt
+            done
         done
     done
 
-    printf "\n-----------------------------------------------------------------------------\nPRUEBAS 1080p\n------------------------------------------------------------------------------\n">> results.txt
-    #Prueba base 1 - 1
-    ./my-effect ./img/1080p/img_1.jpg ./img/1080p/img_1_res.jpg $PARAM 1 1 >> results.txt
-    for (( i=1; i<=((2*$mp)); i=i*2 ))
-    do
-        for (( j=10; j<=2*$cores; j+=20 ))
-        do
-            ./my-effect ./img/1080p/img_1.jpg ./img/1080p/img_1_res.jpg $PARAM $i $j >> results.txt
-        done
-    done
-
-    printf "\n------------------------------------------------------------------------------\nPRUEBAS 4k\n------------------------------------------------------------------------------\n">> results.txt
-    #Prueba base 1 - 1
-    ./my-effect ./img/4k/img_1.jpg ./img/4k/img_1_res.jpg $PARAM 1 1 >> results.txt
-    for (( i=1; i<=((2*$mp)); i=i*2 ))
-    do
-        for (( j=10; j<=2*$cores; j+=20 ))
-        do
-            ./my-effect ./img/4k/img_1.jpg ./img/4k/img_1_res.jpg $PARAM $i $j >> results.txt
-        done
-    done
 echo "Pruebas terminadas, consulte el archivo 'results.txt' para ver los resultados y el archivo 'times.csv' para un resumen"
 fi
