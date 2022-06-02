@@ -53,5 +53,5 @@ else
         done
     done
 
-echo "Pruebas terminadas, consulte el archivo 'results.txt' para ver los resultados y el archivo 'times.csv' para un resumen"
+    echo "Pruebas terminadas, consulte el archivo 'results.txt' para ver los resultados y el archivo 'times.csv' para un resumen"
 fi
