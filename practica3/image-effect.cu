@@ -20,37 +20,37 @@
 #define R_ARGS 5
 #define EXPORT_QUALITY 100
 
-void initializeMatrix(int *matR, int *matG, int *matB, int width, int height, int channels, unsigned char *img)
+void initializeMatrix(int *matRGB, int width, int height, int channels, unsigned char *img)
 {
     int i = 0, j = 0;
     for (i = 0; i < height; i++)
     {
         for (j = 0; j < width; j++)
         {
-            *(matR + (i * width + j)) = *(img + (channels * (i * width + j)));
-            *(matG + ((i * width) + j)) = *(img + (channels * (i * width + j) + 1));
-            *(matB + ((i * width) + j)) = *(img + (channels * (i * width + j) + 2));
+            *(matRGB + (i * width + j)) = *(img + (channels * (i * width + j)));
+            *(matRGB + 1 * (width * height) + (i * width + j)) = *(img + (channels * (i * width + j) + 1));
+            *(matRGB + 2 * (width * height) + (i * width + j)) = *(img + (channels * (i * width + j) + 2));
         }
     }
 }
 
-void joinMatrix(int *matR, int *matG, int *matB, int width, int height, int channels, unsigned char *resImg, unsigned char *img)
+void joinMatrix(int *matRGB, int width, int height, int channels, unsigned char *resImg, unsigned char *img)
 {
     int i = 0, j = 0;
     for (i = 0; i < height; i++)
     {
         for (j = 0; j < width; j++)
         {
-            *(resImg + (channels * (i * width + j))) = *(matR + (i * width + j));
-            *(resImg + (channels * (i * width + j) + 1)) = *(matG + (i * width + j));
-            *(resImg + (channels * (i * width + j) + 2)) = *(matB + (i * width + j));
+            *(resImg + (channels * (i * width + j))) = *(matRGB + (i * width + j));
+            *(resImg + (channels * (i * width + j) + 1)) = *(matRGB + 1 * (width * height) + (i * width + j));
+            *(resImg + (channels * (i * width + j) + 2)) = *(matRGB + 2 * (width * height) + (i * width + j));
             if (channels == 4)
                 *(resImg + (channels * (i * width + j) + 3)) = *(img + (channels * (i * width + j) + 3));
         }
     }
 }
 
-__global__ void applyFilter(int *matR, int *matG, int *matB, int *rMatR, int *rMatG, int *rMatB, int width, int height, int nThreads, int *ker)
+__global__ void applyFilter(int *matRGB, int *rMatRGB, int width, int height, int nThreads, int *ker)
 {
     int thread_id = threadIdx.x + blockIdx.x * blockDim.x;
     /*Variables necesarias para la convolución*/
@@ -62,21 +62,22 @@ __global__ void applyFilter(int *matR, int *matG, int *matB, int *rMatR, int *rM
     int i = (startPos / width), j = (startPos % width);
 
     /*Realizar la convolucion*/
-    for (startPos; startPos <= endPos; startPos++)
+    for (; startPos <= endPos; startPos++)
     {
         /*Ignorar la convolucion en los bordes*/
         if (i > 0 && i < height - 1 && j > 0 && j < width - 1)
         {
-            conv = (*(ker) * *(matR + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matR + ((i - 1) * width + j)) + *(ker + 2) * *(matR + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matR + (i * width + j - 1)) + *(ker + 4) * *(matR + (i * width + j)) + *(ker + 5) * *(matR + (i * width + j + 1)) + *(ker + 6) * *(matR + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matR + ((i + 1) * width + j)) + *(ker + 8) * *(matR + ((i + 1) * width + j + 1))) % 255;
-            *(rMatR + (i * width + j)) = conv < 0 ? 0 : conv;
+            /*Convolucion para el canal R*/
+            conv = (*(ker) * *(matRGB + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matRGB + ((i - 1) * width + j)) + *(ker + 2) * *(matRGB + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matRGB + (i * width + j - 1)) + *(ker + 4) * *(matRGB + (i * width + j)) + *(ker + 5) * *(matRGB + (i * width + j + 1)) + *(ker + 6) * *(matRGB + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matRGB + ((i + 1) * width + j)) + *(ker + 8) * *(matRGB + ((i + 1) * width + j + 1))) % 255;
+            *(rMatRGB + (i * width + j)) = conv < 0 ? 0 : conv;
 
             /*Convolucion para el canal G*/
-            conv = (*(ker) * *(matG + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matG + ((i - 1) * width + j)) + *(ker + 2) * *(matG + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matG + (i * width + j - 1)) + *(ker + 4) * *(matG + (i * width + j)) + *(ker + 5) * *(matG + (i * width + j + 1)) + *(ker + 6) * *(matG + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matG + ((i + 1) * width + j)) + *(ker + 8) * *(matG + ((i + 1) * width + j + 1))) % 255;
-            *(rMatG + (i * width + j)) = conv < 0 ? 0 : conv;
+            conv = (*(ker) * *(matRGB + 1 * (width * height) + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matRGB + 1 * (width * height) + ((i - 1) * width + j)) + *(ker + 2) * *(matRGB + 1 * (width * height) + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matRGB + 1 * (width * height) + (i * width + j - 1)) + *(ker + 4) * *(matRGB + 1 * (width * height) + (i * width + j)) + *(ker + 5) * *(matRGB + 1 * (width * height) + (i * width + j + 1)) + *(ker + 6) * *(matRGB + 1 * (width * height) + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matRGB + 1 * (width * height) + ((i + 1) * width + j)) + *(ker + 8) * *(matRGB + 1 * (width * height) + ((i + 1) * width + j + 1))) % 255;
+            *(rMatRGB + 1 * (width * height) + (i * width + j)) = conv < 0 ? 0 : conv;
 
             /*Convolucion para el canal B*/
-            conv = (*(ker) * *(matB + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matB + ((i - 1) * width + j)) + *(ker + 2) * *(matB + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matB + (i * width + j - 1)) + *(ker + 4) * *(matB + (i * width + j)) + *(ker + 5) * *(matB + (i * width + j + 1)) + *(ker + 6) * *(matB + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matB + ((i + 1) * width + j)) + *(ker + 8) * *(matB + ((i + 1) * width + j + 1))) % 255;
-            *(rMatB + (i * width + j)) = conv < 0 ? 0 : conv;
+            conv = (*(ker) * *(matRGB + 2 * (width * height) + ((i - 1) * width + j - 1)) + *(ker + 1) * *(matRGB + 2 * (width * height) + ((i - 1) * width + j)) + *(ker + 2) * *(matRGB + 2 * (width * height) + ((i - 1) * width + j + 1)) + *(ker + 3) * *(matRGB + 2 * (width * height) + (i * width + j - 1)) + *(ker + 4) * *(matRGB + 2 * (width * height) + (i * width + j)) + *(ker + 5) * *(matRGB + 2 * (width * height) + (i * width + j + 1)) + *(ker + 6) * *(matRGB + 2 * (width * height) + ((i + 1) * width + j - 1)) + *(ker + 7) * *(matRGB + 2 * (width * height) + ((i + 1) * width + j)) + *(ker + 8) * *(matRGB + 2 * (width * height) + ((i + 1) * width + j + 1))) % 255;
+            *(rMatRGB + 2 * (width * height) + (i * width + j)) = conv < 0 ? 0 : conv;
         }
         j += 1;
         if (j == width)
@@ -103,14 +104,14 @@ int main(int argc, char *argv[])
     int nThreads = 0;
     /*Variable para el número de bloques*/
     int nBlocks = 0;
-    /*Crear las tres matrices para cada canal de color*/
-    int *matR, *matG, *matB;
-    /*Crear las tres matrices del device*/
-    int *d_MatR, *d_MatG, *d_MatB;
-    /*Crear las tres matrices para cada canal de color*/
-    int *rMatR, *rMatG, *rMatB;
-    /*Crear las tres matrices resultantes del device*/
-    int *d_rMatR, *d_rMatG, *d_rMatB;
+    /*Crear la matriz de color, con cada uno de los canales RGB*/
+    int *matRGB;
+    /*Crear la matriz de color resultante, con cada uno de los canales RGB*/
+    int *rMatRGB;
+    /*Crear las matriz de color para el device*/
+    int *d_MatRGB;
+    /*Crear la matriz resultante del device*/
+    int *d_rMatRGB;
     /*Crear variable para el sizeof int*/
     int size = sizeof(int);
     /*Variables necesarias para medir tiempos*/
@@ -119,6 +120,7 @@ int main(int argc, char *argv[])
     cudaError_t err = cudaSuccess;
     /*Creación de matriz con los posibles kernel*/
     int *ker;
+    /*Creación del kernel para el device*/
     int *d_ker;
     int kernels[6][9] = {
         {-1, 0, 1, -2, 0, 2, -1, 0, 1},     // Border detection (Sobel)
@@ -162,32 +164,37 @@ int main(int argc, char *argv[])
         printf("Error al cargar la imagen \n");
         exit(1);
     }
+
     /*Medición de tiempo de inicio*/
     gettimeofday(&tval_before, NULL);
+    
     /*Crear cada matriz de Color dependiendo del tamaño*/
-    matR = (int *)malloc(height * width * size);
-    matG = (int *)malloc(height * width * size);
-    matB = (int *)malloc(height * width * size);
-    rMatR = (int *)malloc(height * width * size);
-    rMatG = (int *)malloc(height * width * size);
-    rMatB = (int *)malloc(height * width * size);
-    if (matR == NULL || matG == NULL || matB == NULL || rMatR == NULL || rMatG == NULL || rMatB == NULL)
+
+    matRGB = (int *)malloc(3 * height * width * size);
+    rMatRGB = (int *)malloc(3 * height * width * size);
+    if (matRGB == NULL || rMatRGB == NULL)
     {
-        printf("Error al crear las matrices, problema con malloc \n");
+        printf("Error al crear la matriz de colores, problema con malloc \n");
         exit(1);
     }
 
     /*Inicializar las matrices con los valores de la imagen*/
-    initializeMatrix(matR, matG, matB, width, height, channels, img);
+    initializeMatrix(matRGB, width, height, channels, img);
 
+    /*******************************************/
+    /*                  CUDA                   */
+    /*******************************************/
+
+    
+
+    /*Reservar en memoria una copia del kernel de convolución*/
     err = cudaMalloc((void **)&d_ker, size * 9);
     if (err != cudaSuccess)
     {
         fprintf(stderr, "Failed to allocate device d_ker (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
-
-    // Copy inputs to device
+    /*Copiar el kernel del Host al Device*/
     err = cudaMemcpy(d_ker, ker, size * 9, cudaMemcpyHostToDevice);
     if (err != cudaSuccess)
     {
@@ -195,9 +202,8 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    /*Logica del filtro*/
-    /*Crear las matrices de Color con para los resultados*/
-    err = cudaMalloc((void **)&d_MatR, height * width * size);
+    /*Reservar espacio en memoria para la matriz de color en device*/
+    err = cudaMalloc((void **)&d_MatRGB, 3 * height * width * size);
 
     if (err != cudaSuccess)
     {
@@ -205,105 +211,50 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    err = cudaMalloc((void **)&d_MatG, height * width * size);
-
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to allocate device MatG (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    err = cudaMalloc((void **)&d_MatB, height * width * size);
-
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to allocate device MatB (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    // Copy inputs to device
-    err = cudaMemcpy(d_MatR, matR, height * width * size, cudaMemcpyHostToDevice);
+    /*Copiar la matriz del Host al Device*/
+    err = cudaMemcpy(d_MatRGB, matRGB, 3 * height * width * size, cudaMemcpyHostToDevice);
     if (err != cudaSuccess)
     {
         fprintf(stderr, "Failed to copy MatR from host to device (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
 
-    err = cudaMemcpy(d_MatG, matG, height * width * size, cudaMemcpyHostToDevice);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy MatG from host to device (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    err = cudaMemcpy(d_MatB, matB, height * width * size, cudaMemcpyHostToDevice);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy MatB from host to device (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    /******************************************/
-
     /*Crear las matrices de Color con para los resultados*/
-    err = cudaMalloc((void **)&d_rMatR, height * width * size);
+    err = cudaMalloc((void **)&d_rMatRGB, 3 * height * width * size);
 
     if (err != cudaSuccess)
     {
         fprintf(stderr, "Failed to allocate device MatR (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
-
-    err = cudaMalloc((void **)&d_rMatG, height * width * size);
-
+    /*Copiar la matriz del Host al Device*/
+    err = cudaMemcpy(d_rMatRGB, matRGB, 3 * height * width * size, cudaMemcpyHostToDevice);
     if (err != cudaSuccess)
     {
-        fprintf(stderr, "Failed to allocate device MatG (error code %s)!\n", cudaGetErrorString(err));
+        fprintf(stderr, "Failed to copy MatRGB from host to device (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
 
-    err = cudaMalloc((void **)&d_rMatB, height * width * size);
+    
 
+    /*Ejecutar el kernel*/
+    applyFilter<<<nBlocks, nThreads>>>(d_MatRGB, d_rMatRGB, width, height, nBlocks * nThreads, d_ker);
+
+    
+    
+
+    /*Copiar resultados del device al Host*/
+    err = cudaMemcpy(rMatRGB, d_rMatRGB, 3 * height * width * size, cudaMemcpyDeviceToHost);
     if (err != cudaSuccess)
     {
-        fprintf(stderr, "Failed to allocate device MatB (error code %s)!\n", cudaGetErrorString(err));
+        fprintf(stderr, "Failed to copy rMatRGB from device to host (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
 
-    /*Paralelizar el algoritmo*/
-    applyFilter<<<nBlocks, nThreads>>>(d_MatR, d_MatG, d_MatB, d_rMatR, d_rMatG, d_rMatB, width, height, nBlocks * nThreads, d_ker);
-
-    err = cudaGetLastError();
-
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to launch vectorAdd kernel (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    // Copy result back to host
-    err = cudaMemcpy(rMatR, d_rMatR, height * width * size, cudaMemcpyDeviceToHost);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy rMatR from device to host (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-    err = cudaMemcpy(rMatG, d_rMatG, height * width * size, cudaMemcpyDeviceToHost);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy rMatG from device to host (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-    err = cudaMemcpy(rMatB, d_rMatB, height * width * size, cudaMemcpyDeviceToHost);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy rMatB from device to host (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
+    
 
     /*******************************************/
 
-    /*Exportar la imagen resultante*/
     /*Reservar el espacio de memoria para la imagen resultante*/
     resImg = (unsigned char *)malloc(width * height * channels);
     if (resImg == NULL)
@@ -312,10 +263,12 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    joinMatrix(rMatR, rMatG, rMatB, width, height, channels, resImg, img);
+    /*Exportar la imagen resultante con el tipo de dato requerido*/
+    joinMatrix(rMatRGB, width, height, channels, resImg, img);
 
     /*Medición de tiempo de finalización*/
     gettimeofday(&tval_after, NULL);
+
     /*Guardar la imagen con el nombre especificado*/
     if (strstr(savePath, ".png"))
         stbi_write_png(savePath, width, height, channels, resImg, width * channels);
@@ -339,7 +292,8 @@ int main(int argc, char *argv[])
     fprintf(fp, "%d,%d,%d,%d,%ld.%06ld\n", height, nBlocks, nThreads, argKer, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
     fclose(fp);
     /*Liberar memoria*/
-    free(matR);
+    free(matRGB);
+    /*
     free(matG);
     free(matB);
     cudaFree(d_MatR);
@@ -348,7 +302,10 @@ int main(int argc, char *argv[])
     cudaFree(d_rMatR);
     cudaFree(d_rMatG);
     cudaFree(d_rMatB);
+    */
     cudaFree(d_ker);
+    cudaFree(d_MatRGB);
+    cudaFree(d_rMatRGB);
     free(resImg);
     stbi_image_free(img);
     return 0;
