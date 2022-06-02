@@ -273,6 +273,8 @@ int main(int argc, char *argv[])
     /*Paralelizar el algoritmo*/
     applyFilter<<<nBlocks, nThreads>>>(d_MatR, d_MatG, d_MatB, d_rMatR, d_rMatG, d_rMatB, width, height, nBlocks * nThreads, d_ker);
 
+    cudaDeviceSynchronize();
+    
     err = cudaGetLastError();
 
     if (err != cudaSuccess)
