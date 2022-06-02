@@ -40,8 +40,7 @@ else
     printf "PRUEBAS 720p\n------------------------------------------------------------------------------\n">> results.txt
     #Prueba base 1 - 1
     ./my-effect ./img/720p/img_1.jpg ./img/720p/img_1_res.jpg $PARAM 1 1 >> results.txt
-
-    for (( i=1; i<=((2*$mp)); i+=3 ))
+    for (( i=1; i<=((2*$mp)); i=i*2 ))
     do
         for (( j=10; j<=2*$cores; j+=20 ))
         do
@@ -52,8 +51,7 @@ else
     printf "\n-----------------------------------------------------------------------------\nPRUEBAS 1080p\n------------------------------------------------------------------------------\n">> results.txt
     #Prueba base 1 - 1
     ./my-effect ./img/1080p/img_1.jpg ./img/1080p/img_1_res.jpg $PARAM 1 1 >> results.txt
-
-    for (( i=1; i<=((2*$mp)); i+=3 ))
+    for (( i=1; i<=((2*$mp)); i=i*2 ))
     do
         for (( j=10; j<=2*$cores; j+=20 ))
         do
@@ -64,8 +62,7 @@ else
     printf "\n------------------------------------------------------------------------------\nPRUEBAS 4k\n------------------------------------------------------------------------------\n">> results.txt
     #Prueba base 1 - 1
     ./my-effect ./img/4k/img_1.jpg ./img/4k/img_1_res.jpg $PARAM 1 1 >> results.txt
-
-    for (( i=1; i<=((2*$mp)); i+=3 ))
+    for (( i=1; i<=((2*$mp)); i=i*2 ))
     do
         for (( j=10; j<=2*$cores; j+=20 ))
         do
