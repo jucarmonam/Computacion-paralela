@@ -62,7 +62,7 @@ __global__ void applyFilter(int *matR, int *matG, int *matB, int *rMatR, int *rM
     int i = (startPos / width), j = (startPos % width);
 
     /*Realizar la convolucion*/
-    for (startPos; startPos <= endPos; startPos++)
+    for (; startPos <= endPos; startPos++)
     {
         /*Ignorar la convolucion en los bordes*/
         if (i > 0 && i < height - 1 && j > 0 && j < width - 1)
@@ -274,7 +274,7 @@ int main(int argc, char *argv[])
     applyFilter<<<nBlocks, nThreads>>>(d_MatR, d_MatG, d_MatB, d_rMatR, d_rMatG, d_rMatB, width, height, nBlocks * nThreads, d_ker);
 
     cudaDeviceSynchronize();
-    
+
     err = cudaGetLastError();
 
     if (err != cudaSuccess)
