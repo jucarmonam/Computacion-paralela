@@ -165,9 +165,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    /*Medición de tiempo de inicio*/
-    gettimeofday(&tval_before, NULL);
-    
+
     /*Crear cada matriz de Color dependiendo del tamaño*/
 
     matRGB = (int *)malloc(3 * height * width * size);
@@ -184,8 +182,6 @@ int main(int argc, char *argv[])
     /*******************************************/
     /*                  CUDA                   */
     /*******************************************/
-
-    
 
     /*Reservar en memoria una copia del kernel de convolución*/
     err = cudaMalloc((void **)&d_ker, size * 9);
@@ -235,13 +231,26 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    
+    /*Medición de tiempo de inicio*/
+    gettimeofday(&tval_before, NULL);
 
     /*Ejecutar el kernel*/
     applyFilter<<<nBlocks, nThreads>>>(d_MatRGB, d_rMatRGB, width, height, nBlocks * nThreads, d_ker);
 
+    /*Esperar la ejecución del kernel*/
+    cudaDeviceSynchronize();
     
-    
+    /*Verificar la ejecución completa*/
+    err = cudaGetLastError();
+
+    if (err != cudaSuccess)
+    {
+        fprintf(stderr, "Failed to launch applyFilter kernel (error code %s)!\n", cudaGetErrorString(err));
+        exit(EXIT_FAILURE);
+    }
+
+    /*Medición de tiempo de finalización*/
+    gettimeofday(&tval_after, NULL);
 
     /*Copiar resultados del device al Host*/
     err = cudaMemcpy(rMatRGB, d_rMatRGB, 3 * height * width * size, cudaMemcpyDeviceToHost);
@@ -250,8 +259,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Failed to copy rMatRGB from device to host (error code %s)!\n", cudaGetErrorString(err));
         exit(EXIT_FAILURE);
     }
-
-    
 
     /*******************************************/
 
@@ -266,8 +273,7 @@ int main(int argc, char *argv[])
     /*Exportar la imagen resultante con el tipo de dato requerido*/
     joinMatrix(rMatRGB, width, height, channels, resImg, img);
 
-    /*Medición de tiempo de finalización*/
-    gettimeofday(&tval_after, NULL);
+    
 
     /*Guardar la imagen con el nombre especificado*/
     if (strstr(savePath, ".png"))
@@ -293,16 +299,6 @@ int main(int argc, char *argv[])
     fclose(fp);
     /*Liberar memoria*/
     free(matRGB);
-    /*
-    free(matG);
-    free(matB);
-    cudaFree(d_MatR);
-    cudaFree(d_MatG);
-    cudaFree(d_MatB);
-    cudaFree(d_rMatR);
-    cudaFree(d_rMatG);
-    cudaFree(d_rMatB);
-    */
     cudaFree(d_ker);
     cudaFree(d_MatRGB);
     cudaFree(d_rMatRGB);
