@@ -10,7 +10,7 @@
 #include "omp.h"
 #include <sys/time.h>
 
-#define R_ARGS 4
+#define R_ARGS 5
 
 /*Variable para el size del dato*/
 int size = sizeof(int);
@@ -98,7 +98,7 @@ void transposeP(int *matrix, int *matrixT, int n, int nThreads)
     }
 }
 
-void matMult(int *A, int *B, int *C, int n, int nThreads)
+void matMult(int *A, int *B, int *C, int n)
 {
     int i, j, k;
     int *BT = malloc(n * n * size);
@@ -123,7 +123,7 @@ void matMultP(int *A, int *B, int *C, int n, int nThreads)
 {
     int matrixSize = n * n;
     int *BT = malloc(n * n * size);
-    transposeP(B, BT, n, 16);
+    transposeP(B, BT, n, nThreads);
 #pragma omp parallel num_threads(nThreads)
     {
         int thread_id = omp_get_thread_num(), iter;
@@ -149,10 +149,44 @@ void matMultP(int *A, int *B, int *C, int n, int nThreads)
     free(BT);
 }
 
+void checkMatrix(int *matrix, int *checkMatrix, int n)
+{
+    int i;
+    for (int i = 0; i < n * n; i++)
+    {
+        if (*(matrix + i) != *(checkMatrix + i))
+        {
+            printf("Los resultados calculados en la multiplicación son diferentes \n");
+            exit(1);
+        }
+    }
+}
+
+void writeResult(int *matrix, int n)
+{
+    /*Declaración de variable para la escritura del archivo*/
+    FILE *fp;
+    int i;
+    fp = fopen("../files/matResOMP.txt", "w+");
+    if (fp == NULL)
+    {
+        printf("Error al leer el archivo files/matOMP\n");
+        exit(1);
+    }
+    for (i = 0; i < n * n; i++)
+    {
+        fprintf(fp, "%d", *(matrix + i));
+        if (i < n * n - 1)
+            fprintf(fp, "_");
+    }
+}
+
 int main(int argc, char *argv[])
 {
+    /*Declaración de variable para la escritura del archivo*/
+    FILE *fp;
     /*Arreglo para la mariz A y B*/
-    int *A, *B, *C, *C1;
+    int *A, *B, *C, *ChkRes;
     /*Variables para el PATH de matA y matB*/
     char *pathA, *pathB;
     /*Variable para la matriz A como String*/
@@ -160,18 +194,20 @@ int main(int argc, char *argv[])
     /*Variable para la matriz B como String*/
     char *matrixBS;
     /*Variable para la dimensión N de la matriz y el tamaño máximo de la matriz*/
-    int n, maxSize;
+    int i, n, maxSize;
     /*Variable para el número de hilos*/
     int nThreads = 0;
     /*Variable para el tamaño del número */
     int numSize;
+    /*Variable de automatización*/
+    int test;
     /*Variables necesarias para medir tiempos*/
     struct timeval tval_before, tval_after, tval_result;
     /*Verificar que el número de argumentos sea correcto*/
     if ((argc - 1) != R_ARGS)
     {
         printf("Son necesarios %d argumentos para el funcionamiento\n", R_ARGS);
-        printf("Para una correcta ejecución: ./matMult matrixA matrixB n nThreads\n");
+        printf("Para una correcta ejecución: ./matMult pathMatrixA pathMatrixB n nThreads testing\n");
         exit(1);
     }
 
@@ -181,8 +217,9 @@ int main(int argc, char *argv[])
     n = atoi(*(argv + 3));
     numSize = (int)strlen(*(argv + 3));
     nThreads = atoi(*(argv + 4));
+    test = atoi(*(argv + 5));
     /*Verificar que el número de hilos sea válido*/
-    if (nThreads < 0)
+    if (nThreads <= 0)
     {
         printf("El número de hilos ingresado no es válido \n");
         exit(1);
@@ -204,9 +241,9 @@ int main(int argc, char *argv[])
     A = (int *)malloc(n * n * size);
     B = (int *)malloc(n * n * size);
     C = (int *)malloc(n * n * size);
-    C1 = (int *)malloc(n * n * size);
+    ChkRes = (int *)malloc(n * n * size);
 
-    if (A == NULL || B == NULL || C == NULL)
+    if (A == NULL || B == NULL || C == NULL || ChkRes == NULL)
     {
         printf("Error al crear las matrices, error en la ejecución de malloc \n");
         exit(1);
@@ -214,66 +251,93 @@ int main(int argc, char *argv[])
     /*Se llenan las matrices con los valores almacenados en los String*/
     fillMatrix(matrixAS, A, n);
     fillMatrix(matrixBS, B, n);
+    /*Realizar la multiplicación con el algoritmo secuencial para verificar*/
+    matMult(A, B, ChkRes, n);
 
-    /*
-    for (int i = 0; i < n * n; i++)
+    /* Escribir los resultados en un csv*/
+    fp = fopen("../files/timesOMP.csv", "a");
+    if (fp == NULL)
     {
-        if (i % n == 0)
-            printf("\n");
-        printf("%d ", *(A + i));
+        printf("Error al abrir el archivo csv \n");
+        exit(1);
     }
-    printf("\n");
-    printf("\n");
+    printf("------------------------------------------------\n");
+    printf("                    OpenMP                      \n");
+    printf("------------------------------------------------\n");
+    printf("              Matrix  %d x %d                   \n", n, n);
+    printf("------------------------------------------------\n");
 
-    for (int i = 0; i < n * n; i++)
+    /*En caso de que el parametro de test sea 0, se realiza una única prueba*/
+    if (test == 0)
     {
-        if (i % n == 0)
-            printf("\n");
-        printf("%d ", *(B + i));
+        /*Medición de tiempo de inicio*/
+        gettimeofday(&tval_before, NULL);
+
+        /*Realizar la multiplicación*/
+        matMultP(A, B, C, n, nThreads);
+
+        /*Medición de tiempo de finalización*/
+        gettimeofday(&tval_after, NULL);
+
+        checkMatrix(C, ChkRes, n);
+
+        /*Calcular los tiempos en tval_result*/
+        timersub(&tval_after, &tval_before, &tval_result);
+
+        printf("Tiempo de ejecución ( %d hilos ): %ld.%06ld s \n", nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+        fprintf(fp, "%d,%d,%ld.%06ld\n", n, nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
     }
-    printf("\n");
-    */
-    /*Medición de tiempo de inicio*/
-    gettimeofday(&tval_before, NULL);
-
-    matMult(A, B, C, n, nThreads);
-
-    /*Medición de tiempo de finalización*/
-    gettimeofday(&tval_after, NULL);
-
-    /*Calcular los tiempos en tval_result*/
-    timersub(&tval_after, &tval_before, &tval_result);
-
-    printf("Tiempo de ejecución Secuencial: %ld.%010ld s \n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
-
-    /*Medición de tiempo de inicio*/
-    gettimeofday(&tval_before, NULL);
-
-    matMultP(A, B, C1, n, nThreads);
-
-    /*Medición de tiempo de finalización*/
-    gettimeofday(&tval_after, NULL);
-
-    /*Calcular los tiempos en tval_result*/
-    timersub(&tval_after, &tval_before, &tval_result);
-
-    printf("Tiempo de ejecución Paralelo: %ld.%010ld s \n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
-
-    for (int i = 0; i < n * n; i++)
+    else
     {
-        if (*(C + i) != *(C + i))
+        for (i = 1; i <= nThreads; i *= 2)
         {
-            printf("Resultados diferentes \n");
-            exit(1);
+            /*Medición de tiempo de inicio*/
+            gettimeofday(&tval_before, NULL);
+
+            /*Realizar la multiplicación*/
+            matMultP(A, B, C, n, i);
+
+            /*Medición de tiempo de finalización*/
+            gettimeofday(&tval_after, NULL);
+
+            checkMatrix(C, ChkRes, n);
+
+            /*Calcular los tiempos en tval_result*/
+            timersub(&tval_after, &tval_before, &tval_result);
+
+            printf("Tiempo de ejecución ( %d hilos ): %ld.%06ld s \n", i, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+            fprintf(fp, "%d,%d,%ld.%06ld\n", n, i, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+        }
+        i /= 2;
+        if (nThreads > i)
+        {
+            /*Medición de tiempo de inicio*/
+            gettimeofday(&tval_before, NULL);
+
+            /*Realizar la multiplicación*/
+            matMultP(A, B, C, n, nThreads);
+
+            /*Medición de tiempo de finalización*/
+            gettimeofday(&tval_after, NULL);
+
+            checkMatrix(C, ChkRes, n);
+
+            /*Calcular los tiempos en tval_result*/
+            timersub(&tval_after, &tval_before, &tval_result);
+
+            printf("Tiempo de ejecución ( %d hilos ): %ld.%06ld s \n", nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+            fprintf(fp, "%d,%d,%ld.%06ld\n", n, nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
         }
     }
-    printf("Multiplicación realizada satisfactoriamente :)\n");
+    fclose(fp);
+    writeResult(C, n);
 
     /*Liberar memoria*/
     free(A);
     free(B);
     free(C);
-    free(C1);
-
+    free(ChkRes);
+    free(matrixAS);
+    free(matrixBS);
     return 0;
 }

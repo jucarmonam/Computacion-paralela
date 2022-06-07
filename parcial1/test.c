@@ -25,6 +25,29 @@ void fillMatrix(char *matS, int *matrix, int n)
     }
 }
 
+int getTextSize(char *path)
+{
+    FILE *fp;
+    int i = 0;
+    fp = fopen(path, "r");
+    if (fp == NULL)
+    {
+        perror("Error el abrir el archivo...\n");
+    }
+    while (1)
+    {
+        fgetc(fp);
+        if (feof(fp))
+        {
+            break;
+        }
+        i++;
+    }
+
+    fclose(fp);
+    return i;
+}
+
 void readMatrix(char *path, char *matrixS, int n)
 {
     FILE *fp;
@@ -35,15 +58,19 @@ void readMatrix(char *path, char *matrixS, int n)
     {
         perror("Error el abrir el archivo...\n");
     }
-    do
+    while (1)
     {
         *(matrixS + i) = fgetc(fp);
-        i++;
         if (feof(fp))
+        {
             break;
-    } while (1);
+        }
+        i++;
+    }
 
     fclose(fp);
+
+    printf("Size: %d \n", i);
 }
 
 int main(int argc, char *argv[])
@@ -57,7 +84,8 @@ int main(int argc, char *argv[])
     pathA = *(argv + 1);
     n = atoi(*(argv + 2));
 
-    maxSize = n * n * (6);
+    maxSize = getTextSize(pathA);
+    maxSize = n * n * (5 + 1 + 1);
     matrixAS = malloc(maxSize);
 
     /*
@@ -93,19 +121,23 @@ int main(int argc, char *argv[])
     int *A1;
     A1 = malloc(n * n * sizeof(int));
 
+    printf("Size func:  %d ", n * n * (4 + 1 + 1));
+
     char *matrixAS1 = malloc(maxSize);
 
     readMatrix(pathA, matrixAS1, n);
 
     fillMatrix(matrixAS1, A1, n);
 
+    
     for (int i = 0; i < n * n; i++)
     {
         if (i % n == 0)
             printf("\n");
         printf("%d ", *(A1 + i));
     }
-
+    
+    
     printf("\n");
 
     return 0;
