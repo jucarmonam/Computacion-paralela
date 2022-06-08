@@ -97,7 +97,6 @@ void matMult(int *A, int *B, int *C, int n)
 __global__ void transposeP(int *matrix, int *matrixT, int n, int nThreads)
 {
     int matrixSize = n * n;
-
     int thread_id = threadIdx.x + blockIdx.x * blockDim.x;
     int iter;
 
@@ -143,8 +142,44 @@ __global__ void matMultP(int *A, int *BT, int *C, int n, int nThreads)
     }
 }
 
+void checkMatrix(int *matrix, int *checkMatrix, int n)
+{
+    int i;
+    for (i = 0; i < n * n; i++)
+    {
+        if (*(matrix + i) != *(checkMatrix + i))
+        {
+            printf("Los resultados calculados en la multiplicación son diferentes \n");
+            exit(1);
+        }
+    }
+}
+
+void writeResult(int *matrix, int n)
+{
+    /*Declaración de variable para la escritura del archivo*/
+    FILE *fp;
+    int i;
+    fp = fopen("../files/matResCUDA.txt", "w+");
+    if (fp == NULL)
+    {
+        printf("Error al leer el archivo files/matResCUDA.txt\n");
+        exit(1);
+    }
+    for (i = 0; i < n * n; i++)
+    {
+        fprintf(fp, "%d", *(matrix + i));
+        if (i < n * n - 1)
+            fprintf(fp, "_");
+    }
+}
+
 int main(int argc, char *argv[])
 {
+    /*Declaración de variable para la escritura del archivo*/
+    FILE *fp;
+    /*Variables i, j*/
+    int i, j;
     /*Arreglo para la mariz A, B y C*/
     int *A, *B, *C, *BT, *ChkRes;
     /*Crear las matrices en el device*/
@@ -229,9 +264,19 @@ int main(int argc, char *argv[])
     /*Realizar la multiplicación con el algoritmo secuencial para verificar*/
     matMult(A, B, ChkRes, n);
 
-    /*******************************************/
-    /*                  CUDA                   */
-    /*******************************************/
+    /* Escribir los resultados en un csv*/
+    fp = fopen("../files/timesCUDA.csv", "a");
+    if (fp == NULL)
+    {
+        printf("Error al abrir el archivo csv \n");
+        exit(1);
+    }
+
+    printf("------------------------------------------------\n");
+    printf("                      CUDA                      \n");
+    printf("------------------------------------------------\n");
+    printf("              Matrix  %d x %d                   \n", n, n);
+    printf("------------------------------------------------\n");
 
     /*Reservar en memoria una copia de la matriz A*/
     err = cudaMalloc((void **)&d_A, size * n * n);
@@ -283,68 +328,168 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    /*Medición de tiempo de inicio*/
-    gettimeofday(&tval_before, NULL);
-
-    /*Paralelizar el algoritmo*/
-    transposeP<<<nBlocks, nThreads>>>(d_B, d_BT, n, nBlocks * nThreads);
-
-    cudaDeviceSynchronize();
-
-    err = cudaGetLastError();
-
-    if (err != cudaSuccess)
+    /*En caso de que el parametro de test sea 0, se realiza una única prueba*/
+    if (test == 0)
     {
-        fprintf(stderr, "Failed to launch transposeP (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
+        /*Medición de tiempo de inicio*/
+        gettimeofday(&tval_before, NULL);
 
-    // Copy result back to host
-    err = cudaMemcpy(BT, d_BT, size * n * n, cudaMemcpyDeviceToHost);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy rMatR from device to host (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
+        /*Realizar la transposición*/
+        transposeP<<<nBlocks, nThreads>>>(d_B, d_BT, n, nBlocks * nThreads);
 
-    matMultP<<<nBlocks, nThreads>>>(d_A, d_BT, d_C, n, nBlocks * nThreads);
+        cudaDeviceSynchronize();
 
-    cudaDeviceSynchronize();
+        err = cudaGetLastError();
 
-    err = cudaGetLastError();
-
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to launch matMultP (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    /*Medición de tiempo de finalización*/
-    gettimeofday(&tval_after, NULL);
-
-    /*Calcular los tiempos en tval_result*/
-    timersub(&tval_after, &tval_before, &tval_result);
-
-    printf("Tiempo de ejecución ( %d bloques , %d hilos ): %ld.%06ld s \n", nBlocks, nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
-
-    // Copy result back to host
-    err = cudaMemcpy(C, d_C, size * n * n, cudaMemcpyDeviceToHost);
-    if (err != cudaSuccess)
-    {
-        fprintf(stderr, "Failed to copy C from device to host (error code %s)!\n", cudaGetErrorString(err));
-        exit(EXIT_FAILURE);
-    }
-
-    for (int i = 0; i < n * n; i++)
-    {
-        if (*(ChkRes + i) != *(C + i))
+        if (err != cudaSuccess)
         {
-            printf("Resultados diferentes \n");
-            exit(1);
+            fprintf(stderr, "Failed to launch transposeP (error code %s)!\n", cudaGetErrorString(err));
+            exit(EXIT_FAILURE);
+        }
+
+        /*Realizar la multiplicación de matrices*/
+        matMultP<<<nBlocks, nThreads>>>(d_A, d_BT, d_C, n, nBlocks * nThreads);
+
+        cudaDeviceSynchronize();
+
+        err = cudaGetLastError();
+
+        if (err != cudaSuccess)
+        {
+            fprintf(stderr, "Failed to launch matMultP (error code %s)!\n", cudaGetErrorString(err));
+            exit(EXIT_FAILURE);
+        }
+
+        /*Medición de tiempo de finalización*/
+        gettimeofday(&tval_after, NULL);
+
+        /* Copiar el resultado de vuelta al host*/
+        err = cudaMemcpy(C, d_C, size * n * n, cudaMemcpyDeviceToHost);
+        if (err != cudaSuccess)
+        {
+            fprintf(stderr, "Failed to copy C from device to host (error code %s)!\n", cudaGetErrorString(err));
+            exit(EXIT_FAILURE);
+        }
+
+        checkMatrix(C, ChkRes, n);
+
+        /*Calcular los tiempos en tval_result*/
+        timersub(&tval_after, &tval_before, &tval_result);
+
+        printf("Tiempo de ejecución ( %d bloques, %d hilos ): %ld.%06ld s \n", nBlocks, nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+        fprintf(fp, "%d,%d,%d,%ld.%06ld\n", n, nBlocks, nThreads, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+    }
+    else
+    {
+        for (i = 1; i <= nBlocks; i *= 2)
+        {
+            printf("------------------------------------------------\n");
+            for (j = 10; j <= nThreads; j += 20)
+            {
+                /*Medición de tiempo de inicio*/
+                gettimeofday(&tval_before, NULL);
+
+                /*Paralelizar el algoritmo*/
+                transposeP<<<i, j>>>(d_B, d_BT, n, i * j);
+
+                cudaDeviceSynchronize();
+
+                err = cudaGetLastError();
+
+                if (err != cudaSuccess)
+                {
+                    fprintf(stderr, "Failed to launch transposeP (error code %s)!\n", cudaGetErrorString(err));
+                    exit(EXIT_FAILURE);
+                }
+
+                matMultP<<<i, j>>>(d_A, d_BT, d_C, n, i * j);
+
+                cudaDeviceSynchronize();
+
+                err = cudaGetLastError();
+
+                if (err != cudaSuccess)
+                {
+                    fprintf(stderr, "Failed to launch matMultP (error code %s)!\n", cudaGetErrorString(err));
+                    exit(EXIT_FAILURE);
+                }
+
+                /*Medición de tiempo de finalización*/
+                gettimeofday(&tval_after, NULL);
+
+                /*Calcular los tiempos en tval_result*/
+                timersub(&tval_after, &tval_before, &tval_result);
+
+                printf("Tiempo de ejecución ( %d bloques , %d hilos ): %ld.%06ld s \n", i, j, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+                fprintf(fp, "%d,%d,%d,%ld.%06ld\n", n, i, j, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+
+                // Copiar el resultado de vuelta en el host
+                err = cudaMemcpy(C, d_C, size * n * n, cudaMemcpyDeviceToHost);
+                if (err != cudaSuccess)
+                {
+                    fprintf(stderr, "Failed to copy C from device to host (error code %s)!\n", cudaGetErrorString(err));
+                    exit(EXIT_FAILURE);
+                }
+                checkMatrix(C, ChkRes, n);
+            }
+        }
+        i /= 2;
+        if (nBlocks > i)
+        {
+            i = nBlocks;
+            printf("------------------------------------------------\n");
+            for (j = 10; j <= nThreads; j += 20)
+            {
+                /*Medición de tiempo de inicio*/
+                gettimeofday(&tval_before, NULL);
+
+                /*Paralelizar el algoritmo*/
+                transposeP<<<i, j>>>(d_B, d_BT, n, i * j);
+
+                cudaDeviceSynchronize();
+
+                err = cudaGetLastError();
+
+                if (err != cudaSuccess)
+                {
+                    fprintf(stderr, "Failed to launch transposeP (error code %s)!\n", cudaGetErrorString(err));
+                    exit(EXIT_FAILURE);
+                }
+
+                matMultP<<<i, j>>>(d_A, d_BT, d_C, n, i * j);
+
+                cudaDeviceSynchronize();
+
+                err = cudaGetLastError();
+
+                if (err != cudaSuccess)
+                {
+                    fprintf(stderr, "Failed to launch matMultP (error code %s)!\n", cudaGetErrorString(err));
+                    exit(EXIT_FAILURE);
+                }
+
+                /*Medición de tiempo de finalización*/
+                gettimeofday(&tval_after, NULL);
+
+                /*Calcular los tiempos en tval_result*/
+                timersub(&tval_after, &tval_before, &tval_result);
+
+                printf("Tiempo de ejecución ( %d bloques , %d hilos ): %ld.%06ld s \n", i, j, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+                fprintf(fp, "%d,%d,%d,%ld.%06ld\n", n, i, j, (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+
+                // Copiar el resultado de vuelta en el host
+                err = cudaMemcpy(C, d_C, size * n * n, cudaMemcpyDeviceToHost);
+                if (err != cudaSuccess)
+                {
+                    fprintf(stderr, "Failed to copy C from device to host (error code %s)!\n", cudaGetErrorString(err));
+                    exit(EXIT_FAILURE);
+                }
+                checkMatrix(C, ChkRes, n);
+            }
         }
     }
-    printf("Multiplicación realizada satisfactoriamente :)\n");
-
+    fclose(fp);
+    writeResult(C, n);
     /*Liberar memoria*/
     free(A);
     free(B);
