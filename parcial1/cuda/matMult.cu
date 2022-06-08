@@ -384,7 +384,7 @@ int main(int argc, char *argv[])
         for (i = 1; i <= nBlocks; i *= 2)
         {
             printf("------------------------------------------------\n");
-            for (j = 10; j <= nThreads; j += 20)
+            for (j = 1; j <= nThreads; j += 20)
             {
                 /*Medición de tiempo de inicio*/
                 gettimeofday(&tval_before, NULL);
@@ -431,6 +431,9 @@ int main(int argc, char *argv[])
                     exit(EXIT_FAILURE);
                 }
                 checkMatrix(C, ChkRes, n);
+                /*Probar caso base*/
+                if (j == 1)
+                    j = -10;
             }
         }
         i /= 2;
