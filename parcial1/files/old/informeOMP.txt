@@ -1,0 +1,352 @@
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  8 x 8                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000024 s 
+Tiempo de ejecución ( 2 hilos ): 0.009497 s 
+Tiempo de ejecución ( 4 hilos ): 0.005988 s 
+Tiempo de ejecución ( 8 hilos ): 0.034214 s 
+Tiempo de ejecución ( 16 hilos ): 0.010176 s 
+Tiempo de ejecución ( 32 hilos ): 0.000504 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  16 x 16                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000016 s 
+Tiempo de ejecución ( 2 hilos ): 0.000063 s 
+Tiempo de ejecución ( 4 hilos ): 0.000055 s 
+Tiempo de ejecución ( 8 hilos ): 0.024685 s 
+Tiempo de ejecución ( 16 hilos ): 0.000296 s 
+Tiempo de ejecución ( 32 hilos ): 0.000795 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  32 x 32                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000403 s 
+Tiempo de ejecución ( 2 hilos ): 0.000476 s 
+Tiempo de ejecución ( 4 hilos ): 0.022041 s 
+Tiempo de ejecución ( 8 hilos ): 0.059703 s 
+Tiempo de ejecución ( 16 hilos ): 0.019312 s 
+Tiempo de ejecución ( 32 hilos ): 0.003315 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  64 x 64                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.001928 s 
+Tiempo de ejecución ( 2 hilos ): 0.001524 s 
+Tiempo de ejecución ( 4 hilos ): 0.010391 s 
+Tiempo de ejecución ( 8 hilos ): 0.057753 s 
+Tiempo de ejecución ( 16 hilos ): 0.016041 s 
+Tiempo de ejecución ( 32 hilos ): 0.001203 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  128 x 128                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.006290 s 
+Tiempo de ejecución ( 2 hilos ): 0.005468 s 
+Tiempo de ejecución ( 4 hilos ): 0.002581 s 
+Tiempo de ejecución ( 8 hilos ): 0.026231 s 
+Tiempo de ejecución ( 16 hilos ): 0.003001 s 
+Tiempo de ejecución ( 32 hilos ): 0.002398 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  256 x 256                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.040852 s 
+Tiempo de ejecución ( 2 hilos ): 0.019772 s 
+Tiempo de ejecución ( 4 hilos ): 0.011835 s 
+Tiempo de ejecución ( 8 hilos ): 0.042602 s 
+Tiempo de ejecución ( 16 hilos ): 0.013779 s 
+Tiempo de ejecución ( 32 hilos ): 0.014357 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  512 x 512                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.308889 s 
+Tiempo de ejecución ( 2 hilos ): 0.158779 s 
+Tiempo de ejecución ( 4 hilos ): 0.097041 s 
+Tiempo de ejecución ( 8 hilos ): 0.110436 s 
+Tiempo de ejecución ( 16 hilos ): 0.109004 s 
+Tiempo de ejecución ( 32 hilos ): 0.100810 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  1024 x 1024                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 2.726549 s 
+Tiempo de ejecución ( 2 hilos ): 1.410490 s 
+Tiempo de ejecución ( 4 hilos ): 0.958904 s 
+Tiempo de ejecución ( 8 hilos ): 0.890707 s 
+Tiempo de ejecución ( 16 hilos ): 0.866722 s 
+Tiempo de ejecución ( 32 hilos ): 0.808384 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  8 x 8                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000008 s 
+Tiempo de ejecución ( 2 hilos ): 0.000034 s 
+Tiempo de ejecución ( 4 hilos ): 0.000061 s 
+Tiempo de ejecución ( 8 hilos ): 0.004795 s 
+Tiempo de ejecución ( 16 hilos ): 0.007177 s 
+Tiempo de ejecución ( 32 hilos ): 0.003539 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  16 x 16                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000046 s 
+Tiempo de ejecución ( 2 hilos ): 0.000102 s 
+Tiempo de ejecución ( 4 hilos ): 0.000125 s 
+Tiempo de ejecución ( 8 hilos ): 0.043214 s 
+Tiempo de ejecución ( 16 hilos ): 0.010840 s 
+Tiempo de ejecución ( 32 hilos ): 0.003967 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  32 x 32                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000645 s 
+Tiempo de ejecución ( 2 hilos ): 0.000535 s 
+Tiempo de ejecución ( 4 hilos ): 0.001198 s 
+Tiempo de ejecución ( 8 hilos ): 0.032939 s 
+Tiempo de ejecución ( 16 hilos ): 0.002028 s 
+Tiempo de ejecución ( 32 hilos ): 0.001196 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  64 x 64                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.001293 s 
+Tiempo de ejecución ( 2 hilos ): 0.000973 s 
+Tiempo de ejecución ( 4 hilos ): 0.006610 s 
+Tiempo de ejecución ( 8 hilos ): 0.000470 s 
+Tiempo de ejecución ( 16 hilos ): 0.001155 s 
+Tiempo de ejecución ( 32 hilos ): 0.001032 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  128 x 128                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.005757 s 
+Tiempo de ejecución ( 2 hilos ): 0.003193 s 
+Tiempo de ejecución ( 4 hilos ): 0.001777 s 
+Tiempo de ejecución ( 8 hilos ): 0.019099 s 
+Tiempo de ejecución ( 16 hilos ): 0.005684 s 
+Tiempo de ejecución ( 32 hilos ): 0.002778 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  256 x 256                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.047284 s 
+Tiempo de ejecución ( 2 hilos ): 0.025668 s 
+Tiempo de ejecución ( 4 hilos ): 0.014416 s 
+Tiempo de ejecución ( 8 hilos ): 0.037254 s 
+Tiempo de ejecución ( 16 hilos ): 0.028763 s 
+Tiempo de ejecución ( 32 hilos ): 0.015358 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  512 x 512                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.504364 s 
+Tiempo de ejecución ( 2 hilos ): 0.281847 s 
+Tiempo de ejecución ( 4 hilos ): 0.215340 s 
+Tiempo de ejecución ( 8 hilos ): 0.154825 s 
+Tiempo de ejecución ( 16 hilos ): 0.171943 s 
+Tiempo de ejecución ( 32 hilos ): 0.168677 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  1024 x 1024                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 3.722462 s 
+Tiempo de ejecución ( 2 hilos ): 2.091366 s 
+Tiempo de ejecución ( 4 hilos ): 1.090817 s 
+Tiempo de ejecución ( 8 hilos ): 1.144071 s 
+Tiempo de ejecución ( 16 hilos ): 1.122700 s 
+Tiempo de ejecución ( 32 hilos ): 1.131063 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  8 x 8                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000023 s 
+Tiempo de ejecución ( 2 hilos ): 0.000153 s 
+Tiempo de ejecución ( 4 hilos ): 0.000153 s 
+Tiempo de ejecución ( 8 hilos ): 0.038923 s 
+Tiempo de ejecución ( 16 hilos ): 0.027184 s 
+Tiempo de ejecución ( 32 hilos ): 0.002432 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  16 x 16                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000020 s 
+Tiempo de ejecución ( 2 hilos ): 0.000051 s 
+Tiempo de ejecución ( 4 hilos ): 0.000079 s 
+Tiempo de ejecución ( 8 hilos ): 0.032302 s 
+Tiempo de ejecución ( 16 hilos ): 0.025490 s 
+Tiempo de ejecución ( 32 hilos ): 0.016130 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  32 x 32                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000171 s 
+Tiempo de ejecución ( 2 hilos ): 0.000200 s 
+Tiempo de ejecución ( 4 hilos ): 0.000168 s 
+Tiempo de ejecución ( 8 hilos ): 0.037702 s 
+Tiempo de ejecución ( 16 hilos ): 0.008304 s 
+Tiempo de ejecución ( 32 hilos ): 0.001781 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  64 x 64                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.001032 s 
+Tiempo de ejecución ( 2 hilos ): 0.001053 s 
+Tiempo de ejecución ( 4 hilos ): 0.000597 s 
+Tiempo de ejecución ( 8 hilos ): 0.039963 s 
+Tiempo de ejecución ( 16 hilos ): 0.003741 s 
+Tiempo de ejecución ( 32 hilos ): 0.001105 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  128 x 128                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.008886 s 
+Tiempo de ejecución ( 2 hilos ): 0.003542 s 
+Tiempo de ejecución ( 4 hilos ): 0.001826 s 
+Tiempo de ejecución ( 8 hilos ): 0.002239 s 
+Tiempo de ejecución ( 16 hilos ): 0.002615 s 
+Tiempo de ejecución ( 32 hilos ): 0.003596 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  256 x 256                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.055762 s 
+Tiempo de ejecución ( 2 hilos ): 0.028951 s 
+Tiempo de ejecución ( 4 hilos ): 0.026644 s 
+Tiempo de ejecución ( 8 hilos ): 0.018326 s 
+Tiempo de ejecución ( 16 hilos ): 0.022387 s 
+Tiempo de ejecución ( 32 hilos ): 0.021651 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  512 x 512                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.490432 s 
+Tiempo de ejecución ( 2 hilos ): 0.257972 s 
+Tiempo de ejecución ( 4 hilos ): 0.143830 s 
+Tiempo de ejecución ( 8 hilos ): 0.173443 s 
+Tiempo de ejecución ( 16 hilos ): 0.152209 s 
+Tiempo de ejecución ( 32 hilos ): 0.145261 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  1024 x 1024                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 3.903945 s 
+Tiempo de ejecución ( 2 hilos ): 2.127756 s 
+Tiempo de ejecución ( 4 hilos ): 1.210181 s 
+Tiempo de ejecución ( 8 hilos ): 1.307282 s 
+Tiempo de ejecución ( 16 hilos ): 1.276393 s 
+Tiempo de ejecución ( 32 hilos ): 1.293265 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  8 x 8                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000036 s 
+Tiempo de ejecución ( 2 hilos ): 0.000234 s 
+Tiempo de ejecución ( 4 hilos ): 0.000207 s 
+Tiempo de ejecución ( 8 hilos ): 0.061346 s 
+Tiempo de ejecución ( 16 hilos ): 0.016283 s 
+Tiempo de ejecución ( 32 hilos ): 0.001123 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  16 x 16                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000075 s 
+Tiempo de ejecución ( 2 hilos ): 0.005156 s 
+Tiempo de ejecución ( 4 hilos ): 0.003027 s 
+Tiempo de ejecución ( 8 hilos ): 0.027929 s 
+Tiempo de ejecución ( 16 hilos ): 0.005972 s 
+Tiempo de ejecución ( 32 hilos ): 0.004690 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  32 x 32                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.000402 s 
+Tiempo de ejecución ( 2 hilos ): 0.000481 s 
+Tiempo de ejecución ( 4 hilos ): 0.001521 s 
+Tiempo de ejecución ( 8 hilos ): 0.056195 s 
+Tiempo de ejecución ( 16 hilos ): 0.012748 s 
+Tiempo de ejecución ( 32 hilos ): 0.002098 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  64 x 64                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.003459 s 
+Tiempo de ejecución ( 2 hilos ): 0.001795 s 
+Tiempo de ejecución ( 4 hilos ): 0.001728 s 
+Tiempo de ejecución ( 8 hilos ): 0.093341 s 
+Tiempo de ejecución ( 16 hilos ): 0.001089 s 
+Tiempo de ejecución ( 32 hilos ): 0.001981 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  128 x 128                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.011349 s 
+Tiempo de ejecución ( 2 hilos ): 0.004862 s 
+Tiempo de ejecución ( 4 hilos ): 0.005393 s 
+Tiempo de ejecución ( 8 hilos ): 0.045631 s 
+Tiempo de ejecución ( 16 hilos ): 0.014341 s 
+Tiempo de ejecución ( 32 hilos ): 0.003838 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  256 x 256                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.063154 s 
+Tiempo de ejecución ( 2 hilos ): 0.032487 s 
+Tiempo de ejecución ( 4 hilos ): 0.016766 s 
+Tiempo de ejecución ( 8 hilos ): 0.021158 s 
+Tiempo de ejecución ( 16 hilos ): 0.017619 s 
+Tiempo de ejecución ( 32 hilos ): 0.019757 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  512 x 512                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 0.519577 s 
+Tiempo de ejecución ( 2 hilos ): 0.267284 s 
+Tiempo de ejecución ( 4 hilos ): 0.153527 s 
+Tiempo de ejecución ( 8 hilos ): 0.184407 s 
+Tiempo de ejecución ( 16 hilos ): 0.182011 s 
+Tiempo de ejecución ( 32 hilos ): 0.169307 s 
+------------------------------------------------
+                    OpenMP                      
+------------------------------------------------
+              Matrix  1024 x 1024                   
+------------------------------------------------
+Tiempo de ejecución ( 1 hilos ): 3.975297 s 
+Tiempo de ejecución ( 2 hilos ): 2.470391 s 
+Tiempo de ejecución ( 4 hilos ): 1.418876 s 
+Tiempo de ejecución ( 8 hilos ): 1.435821 s 
+Tiempo de ejecución ( 16 hilos ): 1.397912 s 
+Tiempo de ejecución ( 32 hilos ): 1.379740 s 

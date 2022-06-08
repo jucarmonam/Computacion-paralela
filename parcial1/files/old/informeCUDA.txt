@@ -1,0 +1,2400 @@
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  8 x 8                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000036 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000021 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000010 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000009 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000010 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000009 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000010 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000009 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000009 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000009 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000010 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000009 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000009 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000010 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000009 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000011 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  16 x 16                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000056 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000019 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000016 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000024 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000014 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000017 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000014 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000018 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000015 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000017 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000014 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  32 x 32                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000174 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000083 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000057 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000040 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000038 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000032 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000024 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000045 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000045 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000032 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000026 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000025 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000023 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000090 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000045 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000033 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000024 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000023 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000021 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000017 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000019 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000020 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000020 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000019 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000019 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000018 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000049 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000027 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000021 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000016 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000017 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000016 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000015 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000029 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000020 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000013 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000022 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000016 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  64 x 64                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.001125 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000526 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000415 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000297 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000273 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000247 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000159 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000208 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000151 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000228 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000171 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000215 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000135 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000575 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000278 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000196 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000133 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000126 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000115 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000081 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000113 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000094 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000112 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000103 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000103 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000073 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000298 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000139 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000096 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000071 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000060 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000062 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000042 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000056 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000061 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000062 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000052 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000054 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000046 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000154 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000088 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000062 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000048 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000061 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000044 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000041 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000047 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000048 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000048 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000057 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000061 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000060 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000107 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000060 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000046 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000045 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000040 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000039 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000047 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000053 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000063 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000059 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000074 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000054 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000051 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  128 x 128                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.008371 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.004112 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.003127 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.002636 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.002602 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.002429 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.001962 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.002299 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.001706 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.002192 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.002072 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.001920 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.001754 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.004283 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.002094 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.001585 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.001261 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.001125 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.001071 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000784 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000950 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000741 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000913 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000901 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000899 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000887 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.002195 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.001079 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000731 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000546 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000501 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000475 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000431 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000447 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000383 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000459 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000437 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000403 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000425 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.001134 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000673 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000451 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000483 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000450 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000392 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000274 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000395 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000400 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000393 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000399 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000404 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000328 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000788 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000425 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000301 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000313 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000296 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000268 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000276 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000288 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000198 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000253 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000265 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000250 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000245 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  256 x 256                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.055725 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.027630 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.021155 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.019908 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.018910 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.018999 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.019052 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.018337 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.018047 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.018197 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.017335 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.017248 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.016683 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.028147 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.013880 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.010439 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.009560 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.009161 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.008821 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.008283 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.008116 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.007922 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.007812 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.007208 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.007078 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.006739 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.014400 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.007044 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.005310 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.004322 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.003943 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.003660 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.003351 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.003363 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.003423 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.003384 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.003102 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.003062 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.002956 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.007345 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.004988 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.003679 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.003645 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.003399 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.003032 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.002909 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.002939 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.002333 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.002761 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.002859 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.002723 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.001998 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.005096 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.003069 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.002211 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.002245 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.002117 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.001897 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.001877 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.001887 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.001307 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.001819 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.001850 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.001803 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.001787 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  512 x 512                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.585824 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.280528 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.241568 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.161604 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.165002 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.167650 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.137909 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.163352 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.175494 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.175731 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.137585 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.165360 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.161776 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.302183 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.140603 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.121940 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.083012 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.084549 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.085549 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.079851 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.086732 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.090616 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.099283 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.080696 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.087706 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.082520 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.154058 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.071368 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.063771 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.044692 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.045040 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.045963 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.041578 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.044441 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.045418 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.045134 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.034362 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.037172 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.032325 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.078660 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.061401 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.042825 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.049168 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.041786 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.034594 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.030446 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.034696 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.024108 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.029176 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.029367 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.028473 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.027968 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.055733 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.043005 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.029308 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.030560 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.029727 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.022294 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.019802 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.021869 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.014897 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.018096 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.018584 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.017380 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.016998 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  1024 x 1024                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 4.981994 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 2.317846 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 2.050389 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 1.415588 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 1.474487 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 1.436719 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 1.311367 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 1.462180 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 1.483456 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 1.648531 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 1.426595 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 1.450251 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 1.368707 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 2.488405 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 1.154815 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 1.105545 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.736292 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.811570 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.770989 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.683382 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.763869 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.808933 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.885344 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.744806 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.795304 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.710910 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 1.250357 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.670364 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.631918 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.422558 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.454293 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.435034 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.366229 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.423595 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.420117 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.454881 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.385663 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.404057 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.369114 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.639279 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.541503 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.399795 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.503699 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.461394 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.378564 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.374789 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.383280 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.340830 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.334185 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.316028 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.313157 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.285129 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.450465 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.439385 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.291395 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.330846 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.329058 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.234182 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.218108 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.248921 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.187976 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.209654 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.188997 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.195524 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.202282 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  8 x 8                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000033 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000010 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000010 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000010 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000010 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000010 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000011 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000010 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000010 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000018 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000018 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000011 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000010 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000010 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000026 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000013 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  16 x 16                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000048 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000023 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000019 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000017 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000015 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000015 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000015 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000015 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000026 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000018 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000016 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000014 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000014 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000116 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000016 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000016 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000016 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000015 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000019 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000016 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000016 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000015 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000016 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000022 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  32 x 32                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000194 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000092 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000062 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000045 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000043 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000038 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000029 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000034 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000036 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000037 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000031 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000030 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000027 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000094 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000048 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000037 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000029 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000029 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000026 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000023 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000039 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000024 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000025 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000023 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000023 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000022 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000053 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000031 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000026 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000021 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000020 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000020 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000017 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000019 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000019 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000020 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000019 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000019 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000018 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000033 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000024 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000019 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000019 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000019 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000018 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000018 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000018 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000017 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000017 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000018 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000017 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000016 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000027 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000019 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000018 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000017 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000017 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000017 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000017 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000018 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000017 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000017 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000017 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  64 x 64                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.001144 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000531 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000417 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000298 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000290 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000251 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000159 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000206 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000154 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000228 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000172 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000214 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000136 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000577 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000278 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000197 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000133 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000127 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000118 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000081 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000114 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000095 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000118 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000108 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000107 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000076 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000302 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000140 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000097 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000072 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000068 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000063 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000044 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000057 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000062 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000063 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000053 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000056 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000046 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000157 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000088 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000063 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000048 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000061 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000044 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000042 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000048 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000049 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000049 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000057 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000061 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000062 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000107 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000062 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000047 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000051 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000044 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000045 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000049 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000054 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000064 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000059 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000064 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000054 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000051 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  128 x 128                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.008390 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.004130 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.003120 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.002628 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.002601 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.002422 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.001971 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.002308 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.001713 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.002186 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.002061 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.001905 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.001757 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.004284 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.002098 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.001592 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.001269 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.001126 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.001070 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000788 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000955 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000742 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000920 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000904 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000902 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000877 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.002196 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.001081 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000745 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000550 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000507 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000480 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000439 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000453 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000388 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000468 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000442 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000407 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000427 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.001150 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000686 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000458 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000488 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000452 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000391 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000274 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000399 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000404 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000397 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000403 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000407 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000332 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000793 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000425 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000302 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000317 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000304 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000278 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000286 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000293 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000203 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000260 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000275 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000255 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000249 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  256 x 256                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.055866 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.027722 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.021249 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.020082 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.019191 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.019421 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.019439 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.018677 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.018348 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.018546 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.017668 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.017558 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.016977 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.028659 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.014117 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.010644 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.009729 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.009358 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.008990 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.008455 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.008300 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.008081 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.007973 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.007391 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.007224 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.006874 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.014663 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.007198 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.005436 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.004438 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.004030 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.003749 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.003422 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.003443 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.003493 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.003457 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.003178 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.003132 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.003014 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.007509 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.005101 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.003750 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.003710 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.003469 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.003099 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.002966 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.003002 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.002377 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.002820 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.002924 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.002784 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.002041 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.005220 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.003147 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.002259 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.002295 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.002171 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.001961 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.001931 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.001937 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.001348 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.001866 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.001891 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.001841 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.001830 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  512 x 512                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.592416 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.283855 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.244219 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.162786 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.166764 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.169806 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.139826 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.165547 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.177619 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.177955 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.139494 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.167674 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.165552 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.305918 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.142320 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.123274 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.083936 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.085693 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.086813 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.081076 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.087781 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.090646 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.100447 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.081915 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.088856 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.083317 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.155874 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.072258 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.064907 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.045231 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.045564 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.046421 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.042055 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.044501 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.045828 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.045482 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.034866 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.037555 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.032554 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.079757 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.061890 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.043455 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.049313 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.042363 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.035028 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.030777 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.034993 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.024331 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.029381 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.029720 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.028754 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.028370 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.056309 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.043489 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.029590 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.030962 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.029347 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.022417 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.019990 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.022073 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.014549 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.018282 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.018769 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.017437 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.017089 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  1024 x 1024                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 5.033525 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 2.344489 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 2.077120 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 1.435762 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 1.488468 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 1.444705 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 1.319076 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 1.470132 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 1.492748 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 1.654277 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 1.431095 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 1.460945 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 1.355644 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 2.512165 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 1.162275 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 1.110596 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.740097 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.815351 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.776346 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.688701 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.775349 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.815505 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.891771 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.748691 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.796586 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.708053 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 1.258872 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.651131 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.625700 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.422670 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.454793 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.434596 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.366358 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.425747 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.408922 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.459271 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.386259 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.404710 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.376956 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.639919 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.541139 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.398056 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.499558 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.459596 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.381953 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.373011 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.384033 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.336522 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.330736 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.309625 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.310735 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.285494 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.450953 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.439809 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.290729 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.337108 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.327670 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.237836 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.216909 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.250898 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.189255 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.206490 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.186632 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.189821 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.207093 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  8 x 8                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000043 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000015 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000013 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000017 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000014 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000014 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000013 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000013 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000013 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000013 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000014 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000013 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  16 x 16                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000045 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000020 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000017 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000015 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000013 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000024 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000011 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000016 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  32 x 32                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000197 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000095 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000088 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000075 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000046 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000044 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000035 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000042 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000049 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000040 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000038 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000032 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000029 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000097 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000052 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000040 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000032 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000036 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000031 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000024 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000025 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000027 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000027 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000026 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000025 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000024 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000055 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000033 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000028 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000022 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000022 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000021 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000019 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000021 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000021 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000023 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000022 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000023 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000021 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000038 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000031 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000027 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000023 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000023 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000022 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000021 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000021 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000020 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000020 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000019 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000020 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000018 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000029 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000023 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000018 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000019 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000019 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000019 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000019 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000020 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000019 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000026 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000021 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000021 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000019 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  64 x 64                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.001137 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000533 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000422 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000300 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000276 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000252 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000174 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000215 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000155 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000323 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000192 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000220 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000140 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000584 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000285 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000200 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000138 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000129 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000119 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000083 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000118 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000099 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000116 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000105 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000114 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000075 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000301 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000143 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000098 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000073 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000062 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000063 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000043 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000057 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000064 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000061 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000052 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000056 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000047 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000157 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000090 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000064 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000049 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000061 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000045 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000042 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000047 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000049 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000049 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000058 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000062 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000064 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000109 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000062 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000049 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000046 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000041 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000040 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000048 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000054 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000064 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000060 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000057 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000054 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000052 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  128 x 128                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.008444 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.004166 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.003150 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.002659 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.002639 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.002458 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.001987 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.002325 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.001724 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.002206 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.002075 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.001936 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.001766 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.004320 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.002109 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.001593 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.001273 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.001133 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.001077 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000790 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000960 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000750 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000922 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000919 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000940 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000900 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.002226 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.001085 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000735 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000553 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000505 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000481 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000437 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000450 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000386 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000464 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000442 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000408 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000431 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.001146 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000684 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000456 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000488 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000452 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000395 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000278 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000401 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000413 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000404 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000409 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000416 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000342 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000803 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000431 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000303 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000316 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000300 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000287 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000282 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000291 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000214 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000255 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000269 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000254 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000249 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  256 x 256                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.056125 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.027843 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.021342 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.020165 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.019269 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.019410 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.019480 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.018768 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.018425 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.018617 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.017738 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.017625 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.017041 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.028767 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.014157 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.010681 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.009774 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.009376 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.009008 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.008469 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.008297 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.008096 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.007984 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.007396 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.007235 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.006884 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.014732 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.007213 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.005433 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.004440 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.004048 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.003753 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.003425 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.003452 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.003503 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.003463 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.003180 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.003132 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.003025 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.007532 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.005103 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.003758 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.003727 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.003475 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.003087 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.002971 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.003018 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.002394 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.002819 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.002926 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.002788 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.002047 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.005233 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.003149 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.002260 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.002301 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.002175 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.001958 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.001937 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.001937 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.001338 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.001863 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.001897 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.001849 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.001840 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  512 x 512                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.595576 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.285585 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.246023 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.164330 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.167805 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.170624 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.140344 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.166294 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.178464 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.179026 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.140332 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.168559 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.165600 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.307897 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.143043 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.124029 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.084365 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.085942 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.087105 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.081601 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.088058 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.091244 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.100348 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.082125 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.089414 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.084187 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.157318 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.072542 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.065342 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.045315 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.045680 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.046599 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.042161 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.045500 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.046136 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.045644 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.034916 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.038044 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.032693 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.079866 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.062106 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.043835 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.049804 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.042112 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.035342 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.030861 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.035183 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.024446 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.029507 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.029642 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.028886 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.028322 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.056155 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.043986 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.029734 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.030901 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.029645 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.022473 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.020130 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.022130 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.014627 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.018317 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.018888 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.017460 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.017435 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  1024 x 1024                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 5.077133 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 2.362469 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 2.085942 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 1.444093 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 1.495111 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 1.449903 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 1.326297 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 1.477485 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 1.501618 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 1.662518 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 1.444435 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 1.471454 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 1.373059 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 2.533258 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 1.168197 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 1.116645 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.745957 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.816441 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.776690 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.689601 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.777005 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.802790 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.897091 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.749111 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.797324 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.720968 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 1.257726 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.677307 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.635090 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.423039 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.454870 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.436837 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.366656 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.426170 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.413447 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.458079 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.387241 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.403070 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.378038 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.640176 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.541960 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.400243 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.502651 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.460268 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.383666 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.373801 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.379833 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.338269 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.332034 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.315650 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.310110 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.283862 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.451337 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.439494 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.288095 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.332042 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.334310 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.235686 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.216827 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.251561 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.194658 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.208442 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.192574 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.194845 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.209885 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  8 x 8                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000041 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000014 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000014 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000011 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000014 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  16 x 16                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000052 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000025 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000020 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000015 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000014 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000013 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000023 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000015 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000011 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000013 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000016 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000013 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000011 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000010 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000017 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000011 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000018 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000013 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000012 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000012 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  32 x 32                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.000178 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000086 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000059 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000042 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000038 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000035 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000025 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000031 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000033 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000034 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000028 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000026 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000023 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000092 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000047 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000034 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000025 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000024 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000022 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000018 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000019 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000021 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000021 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000024 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000021 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000020 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000051 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000028 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000022 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000017 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000017 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000017 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000016 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000017 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000017 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000016 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000017 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000031 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000021 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000016 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000016 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000016 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000014 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000015 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000015 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000025 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000023 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000015 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000016 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000018 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000018 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000017 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  64 x 64                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.001132 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.000530 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.000419 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.000304 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.000275 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.000251 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.000159 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.000207 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.000152 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.000231 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.000176 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.000217 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.000138 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.000581 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.000293 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.000204 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.000135 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.000129 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.000118 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000090 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000120 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000096 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000119 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000111 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000108 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000079 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.000312 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.000147 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000102 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000075 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000066 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000072 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000061 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000067 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000066 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000070 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000061 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000063 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000056 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.000163 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000096 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000071 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000053 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000075 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000051 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000046 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000053 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000054 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000055 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000063 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000066 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000067 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000119 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000077 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000059 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000059 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000058 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000047 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000055 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000060 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000070 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000068 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000062 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000061 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000056 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  128 x 128                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.008441 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.004142 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.003162 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.002662 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.002625 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.002447 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.001974 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.002337 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.001743 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.002213 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.002072 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.001930 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.001767 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.004318 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.002129 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.001607 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.001278 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.001134 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.001093 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.000795 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.000959 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.000748 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.000922 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.000909 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.000906 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.000884 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.002216 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.001118 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.000752 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.000562 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.000511 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.000492 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.000439 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.000452 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.000387 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.000469 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.000444 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.000410 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.000431 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.001146 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.000698 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.000466 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.000489 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.000462 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.000398 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.000279 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.000399 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.000405 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.000398 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.000404 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.000408 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.000334 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.000800 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.000429 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.000313 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.000335 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.000313 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.000283 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.000285 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.000295 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.000203 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.000263 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.000277 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.000258 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.000249 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  256 x 256                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.064977 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.032257 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.024690 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.023355 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.022314 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.022481 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.022554 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.019969 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.019132 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.019340 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.018425 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.018316 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.017700 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.029895 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.014703 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.011095 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.009807 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.009393 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.009003 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.008464 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.008297 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.008091 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.007980 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.007397 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.007231 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.006884 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.014727 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.007253 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.005456 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.004446 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.004039 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.003747 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.003431 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.003453 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.003499 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.003460 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.003185 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.003138 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.003023 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.007521 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.005105 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.003759 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.003720 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.003482 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.003096 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.002976 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.003009 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.002382 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.002825 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.002932 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.002792 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.002046 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.005232 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.003142 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.002269 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.002309 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.002180 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.001954 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.001926 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.001932 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.001343 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.001871 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.001899 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.001849 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.001833 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  512 x 512                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 0.594429 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 0.284901 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 0.245184 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 0.163628 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 0.167387 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 0.170424 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 0.140275 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 0.166200 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 0.178212 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 0.177638 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 0.140139 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 0.168304 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 0.164144 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 0.307181 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 0.142800 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 0.123636 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.084182 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.085885 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.086968 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.081282 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.087810 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.091094 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.099869 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.082230 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.088808 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.083622 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 0.156669 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.072476 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.064537 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.045198 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.045610 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.046459 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.042128 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.044325 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.045898 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.045530 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.034958 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.037907 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.032670 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.079853 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.061950 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.043591 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.050747 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.042067 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.034984 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.030883 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.035077 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.024498 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.029520 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.029640 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.028823 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.028339 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.056179 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.043890 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.029867 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.031217 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.029305 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.022468 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.020030 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.021979 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.014631 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.018298 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.018727 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.017533 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.017466 s 
+------------------------------------------------
+                      CUDA                      
+------------------------------------------------
+              Matrix  1024 x 1024                   
+------------------------------------------------
+------------------------------------------------
+Tiempo de ejecución ( 1 bloques , 10 hilos ): 5.065506 s 
+Tiempo de ejecución ( 1 bloques , 30 hilos ): 2.354418 s 
+Tiempo de ejecución ( 1 bloques , 50 hilos ): 2.082694 s 
+Tiempo de ejecución ( 1 bloques , 70 hilos ): 1.440782 s 
+Tiempo de ejecución ( 1 bloques , 90 hilos ): 1.492983 s 
+Tiempo de ejecución ( 1 bloques , 110 hilos ): 1.447888 s 
+Tiempo de ejecución ( 1 bloques , 130 hilos ): 1.323539 s 
+Tiempo de ejecución ( 1 bloques , 150 hilos ): 1.473318 s 
+Tiempo de ejecución ( 1 bloques , 170 hilos ): 1.493406 s 
+Tiempo de ejecución ( 1 bloques , 190 hilos ): 1.665534 s 
+Tiempo de ejecución ( 1 bloques , 210 hilos ): 1.437581 s 
+Tiempo de ejecución ( 1 bloques , 230 hilos ): 1.461809 s 
+Tiempo de ejecución ( 1 bloques , 250 hilos ): 1.396805 s 
+------------------------------------------------
+Tiempo de ejecución ( 2 bloques , 10 hilos ): 2.530620 s 
+Tiempo de ejecución ( 2 bloques , 30 hilos ): 1.165680 s 
+Tiempo de ejecución ( 2 bloques , 50 hilos ): 1.113061 s 
+Tiempo de ejecución ( 2 bloques , 70 hilos ): 0.739416 s 
+Tiempo de ejecución ( 2 bloques , 90 hilos ): 0.815628 s 
+Tiempo de ejecución ( 2 bloques , 110 hilos ): 0.775816 s 
+Tiempo de ejecución ( 2 bloques , 130 hilos ): 0.688709 s 
+Tiempo de ejecución ( 2 bloques , 150 hilos ): 0.775651 s 
+Tiempo de ejecución ( 2 bloques , 170 hilos ): 0.802455 s 
+Tiempo de ejecución ( 2 bloques , 190 hilos ): 0.890216 s 
+Tiempo de ejecución ( 2 bloques , 210 hilos ): 0.751317 s 
+Tiempo de ejecución ( 2 bloques , 230 hilos ): 0.797152 s 
+Tiempo de ejecución ( 2 bloques , 250 hilos ): 0.710160 s 
+------------------------------------------------
+Tiempo de ejecución ( 4 bloques , 10 hilos ): 1.258831 s 
+Tiempo de ejecución ( 4 bloques , 30 hilos ): 0.648883 s 
+Tiempo de ejecución ( 4 bloques , 50 hilos ): 0.634734 s 
+Tiempo de ejecución ( 4 bloques , 70 hilos ): 0.420742 s 
+Tiempo de ejecución ( 4 bloques , 90 hilos ): 0.454479 s 
+Tiempo de ejecución ( 4 bloques , 110 hilos ): 0.435899 s 
+Tiempo de ejecución ( 4 bloques , 130 hilos ): 0.366332 s 
+Tiempo de ejecución ( 4 bloques , 150 hilos ): 0.424870 s 
+Tiempo de ejecución ( 4 bloques , 170 hilos ): 0.410610 s 
+Tiempo de ejecución ( 4 bloques , 190 hilos ): 0.458431 s 
+Tiempo de ejecución ( 4 bloques , 210 hilos ): 0.380690 s 
+Tiempo de ejecución ( 4 bloques , 230 hilos ): 0.405366 s 
+Tiempo de ejecución ( 4 bloques , 250 hilos ): 0.375820 s 
+------------------------------------------------
+Tiempo de ejecución ( 8 bloques , 10 hilos ): 0.639977 s 
+Tiempo de ejecución ( 8 bloques , 30 hilos ): 0.540041 s 
+Tiempo de ejecución ( 8 bloques , 50 hilos ): 0.402698 s 
+Tiempo de ejecución ( 8 bloques , 70 hilos ): 0.514898 s 
+Tiempo de ejecución ( 8 bloques , 90 hilos ): 0.461745 s 
+Tiempo de ejecución ( 8 bloques , 110 hilos ): 0.387557 s 
+Tiempo de ejecución ( 8 bloques , 130 hilos ): 0.377540 s 
+Tiempo de ejecución ( 8 bloques , 150 hilos ): 0.385748 s 
+Tiempo de ejecución ( 8 bloques , 170 hilos ): 0.339326 s 
+Tiempo de ejecución ( 8 bloques , 190 hilos ): 0.334004 s 
+Tiempo de ejecución ( 8 bloques , 210 hilos ): 0.314131 s 
+Tiempo de ejecución ( 8 bloques , 230 hilos ): 0.313019 s 
+Tiempo de ejecución ( 8 bloques , 250 hilos ): 0.286736 s 
+------------------------------------------------
+Tiempo de ejecución ( 12 bloques , 10 hilos ): 0.453627 s 
+Tiempo de ejecución ( 12 bloques , 30 hilos ): 0.441048 s 
+Tiempo de ejecución ( 12 bloques , 50 hilos ): 0.289657 s 
+Tiempo de ejecución ( 12 bloques , 70 hilos ): 0.334380 s 
+Tiempo de ejecución ( 12 bloques , 90 hilos ): 0.314509 s 
+Tiempo de ejecución ( 12 bloques , 110 hilos ): 0.234911 s 
+Tiempo de ejecución ( 12 bloques , 130 hilos ): 0.216453 s 
+Tiempo de ejecución ( 12 bloques , 150 hilos ): 0.252499 s 
+Tiempo de ejecución ( 12 bloques , 170 hilos ): 0.192726 s 
+Tiempo de ejecución ( 12 bloques , 190 hilos ): 0.211052 s 
+Tiempo de ejecución ( 12 bloques , 210 hilos ): 0.190528 s 
+Tiempo de ejecución ( 12 bloques , 230 hilos ): 0.200710 s 
+Tiempo de ejecución ( 12 bloques , 250 hilos ): 0.208827 s 

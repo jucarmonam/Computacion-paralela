@@ -74,8 +74,9 @@ if [ "$COMPATIBLE" = true ]; then
         echo ""
         COMPATIBLE=true
     fi
-    cd ../..
+    cd ..
 fi
+cd ..
 
 
 #Realizar la ejecución de la multiplicación de matrices con distintos tamaños
@@ -88,6 +89,7 @@ echo "------------------------------------------------"
     #Create folder if does not exist
     mkdir -p files
     ./matrixGen $n > files/matA.txt
+    echo ""
     if [ $? -eq 0 ]; then
         echo "✓ Matriz A generada correctamente"
     else
