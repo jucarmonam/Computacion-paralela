@@ -211,7 +211,7 @@ int main(int argc, char *argv[])
         printf("Tiempo de ejecución: %f s \n", maxtime);
         printf("Resumen: (RES, PROCESOS, PARAM, TIEMPO) \t%dp\t%d\t%d\t%f\t\n", height, numProcs, argKer, maxtime);
         /* Escribir los resultados en un csv*/
-        fp = fopen("times.csv", "a");
+        fp = fopen("/home/sebastian/times.csv", "a");
         if (fp == NULL)
         {
             printf("Error al abrir el archivo \n");

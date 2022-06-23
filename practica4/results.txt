@@ -1,0 +1,202 @@
+
+-----------------------------------------------------------------------------
+PRUEBAS 720 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.057818 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	1	0	0.057818	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.058129 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	2	0	0.058129	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 4,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.052498 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	4	0	0.052498	
+Error al abrir el archivo 
+
+-----------------------------------------------------------------------------
+PRUEBAS 1080 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.097845 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	1080p	1	0	0.097845	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.108749 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	1080p	2	0	0.108749	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 4,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.294878 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	1080p	4	0	0.294878	
+Error al abrir el archivo 
+
+-----------------------------------------------------------------------------
+PRUEBAS 2160 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/2160p/img_1.jpg,   Imagen exportada: ./img/2160p/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.392724 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	2160p	1	0	0.392724	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/2160p/img_1.jpg,   Imagen exportada: ./img/2160p/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.417139 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	2160p	2	0	0.417139	
+Error al abrir el archivo 
+
+-----------------------------------------------------------------------------
+PRUEBAS 720 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.049992 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	1	0	0.049992	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.055902 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	2	0	0.055902	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 4,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.097834 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	4	0	0.097834	
+Error al abrir el archivo 
+
+-----------------------------------------------------------------------------
+PRUEBAS 1080 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.097642 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	1080p	1	0	0.097642	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.117001 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	1080p	2	0	0.117001	
+Error al abrir el archivo 
+
+-----------------------------------------------------------------------------
+PRUEBAS 2160 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/2160p/img_1.jpg,   Imagen exportada: ./img/2160p/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.465875 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	2160p	1	0	0.465875	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/2160p/img_1.jpg,   Imagen exportada: ./img/2160p/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.400110 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	2160p	2	0	0.400110	
+Error al abrir el archivo 
+
+------------------------------------------------------------------------------
+Número de procesos: 4,  Imagen carga: ./img/2160p/img_1.jpg,   Imagen exportada: ./img/2160p/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.875957 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	2160p	4	0	0.875957	
+Error al abrir el archivo 
+
+-----------------------------------------------------------------------------
+PRUEBAS 720 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.042660 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	1	0	0.042660	
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.059469 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	2	0	0.059469	
+
+------------------------------------------------------------------------------
+Número de procesos: 4,  Imagen carga: ./img/720p/img_1.jpg,   Imagen exportada: ./img/720p/img_1_res.jpg
+Resolución: 720p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.096491 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	720p	4	0	0.096491	
+
+-----------------------------------------------------------------------------
+PRUEBAS 1080 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.109501 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	1080p	1	0	0.109501	
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.103464 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	1080p	2	0	0.103464	
+
+------------------------------------------------------------------------------
+Número de procesos: 4,  Imagen carga: ./img/1080p/img_1.jpg,   Imagen exportada: ./img/1080p/img_1_res.jpg
+Resolución: 1080p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.327320 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	1080p	4	0	0.327320	
+
+-----------------------------------------------------------------------------
+PRUEBAS 2160 p
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Número de procesos: 1,  Imagen carga: ./img/2160p/img_1.jpg,   Imagen exportada: ./img/2160p/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.404820 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	2160p	1	0	0.404820	
+
+------------------------------------------------------------------------------
+Número de procesos: 2,  Imagen carga: ./img/2160p/img_1.jpg,   Imagen exportada: ./img/2160p/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 0.406867 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	2160p	2	0	0.406867	
+
+------------------------------------------------------------------------------
+Número de procesos: 4,  Imagen carga: ./img/2160p/img_1.jpg,   Imagen exportada: ./img/2160p/img_1_res.jpg
+Resolución: 2160p,  Número de kernel (Parámetro): 0
+Tiempo de ejecución: 1.005647 s 
+Resumen: (RES, PROCESOS, PARAM, TIEMPO) 	2160p	4	0	1.005647	
