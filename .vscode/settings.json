@@ -1,5 +1,15 @@
 {
     "files.associations": {
-        "stb_image_write.h": "c"
+        "stb_image_write.h": "c",
+        "math.h": "c",
+        "omp.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "deque": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "vector": "c"
     }
 }
