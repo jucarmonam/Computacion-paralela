@@ -1,7 +1,7 @@
 #!/bin/bash
 COMPATIBLE=false
 TESTING=1
-THREADSMP=32
+THREADSMP=17
 CHECK=false
 echo "------------------------------------------------"
 echo "------------------------------------------------"
@@ -109,7 +109,7 @@ echo "------------------------------------------------"
     echo "------------------------------------------------"
     echo "                      OpenMP                    "
     echo "------------------------------------------------"
-    ./matMult ../files/matA.txt ../files/matB.txt $n $THREADSMP $TESTING >> ../files/informeOMP.txt
+    ./matMult ../files/matA.txt ../files/matB.txt $n $THREADSMP $TESTING #>> ../files/informeOMP.txt
     if [ $? -eq 0 ]; then
         echo "✓ Pruebas de Multiplicación realizadas correctamente"
     else
