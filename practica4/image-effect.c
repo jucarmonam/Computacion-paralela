@@ -132,8 +132,7 @@ int main(int argc, char *argv[])
     MPI_Comm_rank(MPI_COMM_WORLD, &processId);
 
     double mytime = 0;
-    MPI_Barrier(MPI_COMM_WORLD); /* IMPORTANT */
-    double start = MPI_Wtime();
+    
 
     ////////////////////////////////////////////////////
 
@@ -145,6 +144,9 @@ int main(int argc, char *argv[])
     int *rMatPrR = (int *)calloc(sizeMat, sizeof(int));
     int *rMatPrG = (int *)calloc(sizeMat, sizeof(int));
     int *rMatPrB = (int *)calloc(sizeMat, sizeof(int));
+    
+    MPI_Barrier(MPI_COMM_WORLD); /* IMPORTANT */
+    double start = MPI_Wtime();
 
     /*Calcular la posición inicial en términos de i y j*/
     int i = (startPos / width), j = (startPos % width);
@@ -189,6 +191,7 @@ int main(int argc, char *argv[])
     ////////////////////////////////////////////////////
     if (processId == 0)
     {
+        maxtime /= numProcs;
         /*Exportar la imagen resultante*/
         /*Reservar el espacio de memoria para la imagen resultante*/
         resImg = malloc(width * height * channels);
